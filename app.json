@@ -1,13 +1,48 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/logs/logs"
+        "pages/file/file",
+        "pages/news/news",
+        "pages/person/person"
+        
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "WeChat",
         "navigationBarTextStyle": "black"
+    },
+    "tabBar":{
+        "color":"#B4B4B4",
+        "selectedColor":"#A5CE52",
+        "list":[{
+            "pagePath":"pages/index/index",
+            "iconPath":"assets/img/00.png",
+            "selectedIconPath":"assets/img/01.png",
+            "text":"首页"
+        },
+        {
+            "pagePath":"pages/file/file",
+            "iconPath":"assets/img/10.png",
+            "selectedIconPath":"assets/img/11.png",
+            "text":"归档"
+        },
+        {
+            "pagePath":"pages/news/news",
+            "iconPath":"assets/img/20.png",
+            "selectedIconPath":"assets/img/21.png",
+            "text":"消息"
+        },
+        {
+            "pagePath":"pages/person/person",
+            "iconPath":"assets/img/30.png",
+            "selectedIconPath":"assets/img/31.png",
+            "text":"个人"
+        }
+    ]},
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
     },
     "sitemapLocation": "sitemap.json"
 }

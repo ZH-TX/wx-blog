@@ -1,13 +1,37 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+<!-- 头部 -->
+<view>
+  <view class="header">
+    <image class="head-img" src="" mode="aspectFit"  />
+    <text>玛丽缇娜</text>
+
+    <input type="text" placeholder="关键词,标签"/>     
+    <image  class="head-link" src="" mode="aspectFit"  />
+
+  
   </view>
 </view>
+<!-- 主体 -->
+<view class="main">
+  <view class="content">
+    <view>
+      <image> </image>
+      <image></image>
+    </view>
+    <view>
+      <text></text>
+    </view>
+      
+      
+  
+  </view>
+</view>
+<!-- 添加 -->
+<view class="add">加号</view>
+  
+
+
+
+
+
