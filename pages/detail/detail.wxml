@@ -1,0 +1,26 @@
+<!-- 头部(未做) -->
+<view>
+    <image class="" src="" /> 
+    <view>
+        <view class="name"></view> <image class="sex"></image>
+        <view class="name-info"> </view>
+          
+    </view>
+</view>
+
+<!-- 主体 -->
+<view>
+    <view class="content-layout">
+        <view>
+            <image class="" src=""  />
+            <view>
+                我的关注
+            </view>
+              
+        </view>
+        <image class="arrow" src="/assets/img/arrow.png"></image>
+          
+        
+          
+    </view>
+</view>

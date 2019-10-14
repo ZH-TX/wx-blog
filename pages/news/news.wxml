@@ -1,2 +1,29 @@
 <!--pages/news/news.wxml-->
-<text>pages/news/news.wxml</text>
+<view class="header">
+    <view>
+        <image class="header-img" src="/assets/img/tip.png" mode="scaleToFill" />
+        <view>消息通知</view>
+
+    </view>
+
+
+</view>
+<view class="content">
+    <view>
+        <view>
+            <image class="" src=""  />
+            <view>
+                <text></text>
+                <text></text>
+                <text></text>
+                <text></text>
+            </view>
+            <view>
+                
+            </view>
+              
+              
+        </view>
+    </view>
+</view>
+  

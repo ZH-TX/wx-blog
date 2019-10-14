@@ -1,34 +1,147 @@
-<!--index.wxml-->
 
 <!-- 头部 -->
-<view>
-  <view class="header">
-    <image class="head-img" src="" mode="aspectFit"  />
-    <text>玛丽缇娜</text>
+<loading hidden="{{isRefresh}}">数据加载中</loading>
+<view hidden="{{!isRefresh}}">
+  	<view>
+		<view class="header">
+			<view class="header-left">
+				<image hidden="{{isInput}}" class="header-img" src="/assets/img/page1/椭圆 1.png" mode="scaleToFill" />
+				<text  class="header-name">玛丽缇娜</text>
+				<image class="pull" src="/assets/img/page1/下拉.png"></image>
+			</view>
+			<view class="header-right {{!isInput?'header-search':'active-search'}}">
+				<image class="search-img" src="/assets/img/page1/搜索.png"  />
+		  
+				<input class="input" placeholder-class="ph-font" type ="text" placeholder="关键词,标签" bindtap="tap" />
+				<image hidden="{{!isInput}}" class="search-cancel" src="/assets/img/page1/取消.png" bindtap="cancel" />
+				  
+				<!-- <image class="header-link" src="/assets/img/page1/链接 (2).png" mode="aspectFit" 
+				bindtap="shareLink"/> -->
+			</view>
+			<view wx:if="{{isInput}}" class="search-item"> 
+				暂无数据
+			</view>
+		</view>
 
-    <input type="text" placeholder="关键词,标签"/>     
-    <image  class="head-link" src="" mode="aspectFit"  />
+  	</view>
+	<!-- 主体 -->
 
-  
-  </view>
+	<view class="main">
+		<view class="content">
+			<view class="content-info">
+				<view class="content-pic">
+					<image class="content-img img-left" src="/assets/img/page1/AI.png" />
+					<image class="content-img" src="/assets/img/page1/AI2.png" />
+				</view>
+				<view class="font">AI技术在智能海报设计中的应用越来越广泛</view>
+				<view class="tag-info">
+					<view>
+						<image class="tag-img" src="/assets/img/page1/标签.png" />
+						<text class="tag-font">AI , </text>
+						<text class="tag-font">计算机视觉 , </text>
+						<text class="tag-font">算法</text>
+					</view>
+					<view>
+						<image class="tag-img1" src="/assets/img/page1/日历.png" />
+						<text class="tag-time">2019.10.10</text>
+					</view>
+				</view>
+				<view class="talk">
+					<view class="talk-lf">
+						<image class="talk-img" src="/assets/img/page1/头像3.png"></image>
+						<image class="talk-img" src="/assets/img/page1/头像4.png"></image>
+						<image class="talk-img" src="/assets/img/page1/头像5.png"></image>
+						<text class="talk-like">等7人喜欢 </text>
+					</view>
+					<view class="talk-rg" bindtap="changeImg">
+						<image class="talk-img" src="/assets/img/page1/图层 6.png"  hidden="{{isActive}}" ></image>
+						<image class="talk-img active" src="/assets/img/page1/喜欢.png" hidden="{{!isActive}}"></image>
+						<image class="talk-img talk-img-rg" src="/assets/img/page1/转发.png"></image>
+					</view>
+				</view>
+				<view class="talk-font">
+
+					<text>华美: <text class="talk-font-c" >写的很棒!</text></text>
+					<text>Jerry: <text class="talk-font-c" >是啊,现在AI领域很流行</text></text>
+					<text>进击的橙子: <text class="talk-font-c" >理解的很深刻</text></text>
+					<text class="talk-comment"> 共6条评论</text>
+				</view>
+				<view class="talk-input">
+					<input type="text" placeholder-class="like-input" placeholder="喜欢就评论告诉TA" />
+					<image class="talk-info-img" src="/assets/img/page1/评论.png" />
+
+				</view>
+
+			</view>
+		</view>
+		<!-- 展示第二个 -->
+		<view class="content">
+			<view class="content-info">
+				<view class="content-text">
+					<view class="content-text-tit">
+						深度学习在探索业务中的探索与实践
+					</view>
+					<view class="content-acticle">
+						酒店搜索跟传统的搜索排序中存在很多不一样的地方,
+						酒店搜索业务局别独有的业务特点,本文分享了深度学习
+					</view>
+				</view>
+				
+				<view class="tag-info">
+					<view>
+						<image class="tag-img" src="/assets/img/page1/标签.png" />
+						<text class="tag-font">NLP , </text>
+						<text class="tag-font">深度学习 , </text>
+						<text class="tag-font">用户平台</text>
+					</view>
+					<view>
+						<image class="tag-img1" src="/assets/img/page1/日历.png" />
+						<text class="tag-time">2019.10.10</text>
+					</view>
+				</view>
+				<view class="talk">
+					<view class="talk-lf">
+						<image class="talk-img" src="/assets/img/page1/头像3.png"></image>
+						<image class="talk-img" src="/assets/img/page1/头像4.png"></image>
+						<image class="talk-img" src="/assets/img/page1/头像5.png"></image>
+						<text class="talk-like">等7人喜欢 </text>
+					</view>
+					<view class="talk-rg" bindtap="changeImg">
+						<image class="talk-img" src="/assets/img/page1/图层 6.png"  hidden="{{isActive}}" ></image>
+						<image class="talk-img active" src="/assets/img/page1/喜欢.png" hidden="{{!isActive}}"></image>
+						<image class="talk-img talk-img-rg" src="/assets/img/page1/转发.png"></image>
+					</view>
+				</view>
+				<view class="talk-font">
+
+					<text>华美: <text class="talk-font-c" >写的很棒!</text></text>
+					<text>Jerry: <text class="talk-font-c" >是啊,现在AI领域很流行</text></text>
+					<text>进击的橙子: <text class="talk-font-c" >理解的很深刻</text></text>
+					<text class="talk-comment"> 共6条评论</text>
+				</view>
+				<view class="talk-input">
+					<input type="text" placeholder-class="like-input" placeholder="喜欢就评论告诉TA"  />
+					<image class="talk-info-img" src="/assets/img/page1/评论.png" />
+
+				</view>
+
+			</view>
+		</view>
+
+
+		
+	</view>
+	<!-- 加号 -->
+	<!-- <button open-type="share">测试share功能</button> -->
+	<view class="add">
+		<navigator class="" url="/pages/daily/daily" hover-class="navigator-hover" open-type="navigate">
+			<image class="add-img" src="/assets/img/page1/加号.png" bindtap="addMore"></image>
+		</navigator>
+
+
+	</view>
+
 </view>
-<!-- 主体 -->
-<view class="main">
-  <view class="content">
-    <view>
-      <image> </image>
-      <image></image>
-    </view>
-    <view>
-      <text></text>
-    </view>
-      
-      
-  
-  </view>
-</view>
-<!-- 添加 -->
-<view class="add">加号</view>
   
 
 

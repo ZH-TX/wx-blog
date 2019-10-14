@@ -1,0 +1,91 @@
+.header {
+  position: fixed;
+  height: 88rpx;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #FAF9F4;
+  z-index: 10;
+}
+
+.daily-main {
+  
+}
+
+.header-send {
+  background: #69D7C1;
+  color: #fff;
+  border-radius: 6px;
+  width: 48px;
+  height: 21px;
+  text-align: center;
+  line-height: 21px;
+
+}
+
+.content {
+  margin: 20rpx 38rpx;
+  margin-top: 108rpx;
+  height: 740rpx;
+  border-radius: 3px;
+}
+
+.page-section-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 26rpx;
+  border-bottom: 1px solid #B4B4B4;
+
+}
+
+.page-section-write {
+  /* display: flex; */
+  /* align-items: center; */
+
+
+}
+
+.title-t {
+  width: 42px;
+}
+
+.title-text {
+  margin-left: 24rpx;
+
+}
+
+.save-draft {
+  color: #B4B4B4;
+  text-align: right;
+  padding-right: 32rpx;
+}
+
+.bottom-content{
+  /* display: flex; */
+  /* align-items: baseline; */
+}
+.add-pic{
+  width: 108px;
+  height: 108px;
+}
+.add-tag{
+  display: flex;
+  align-items: center;
+  width: 83px;
+  height: 27px;
+  border-radius: 5px;
+  background: #F2F2F2;
+  text-align: center;
+}
+.add-tag-img{
+  padding-left: 10px;
+  width: 10px;
+  height: 10px;
+
+}
+.add-tag-font{
+  font-size: 10px;
+  padding: 6px 8px;
+}

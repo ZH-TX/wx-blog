@@ -3,7 +3,9 @@
         "pages/index/index",
         "pages/file/file",
         "pages/news/news",
-        "pages/person/person"
+        "pages/person/person",
+        "pages/daily/daily",
+        "pages/detail/detail"
         
     ],
     "window": {
@@ -15,6 +17,7 @@
     "tabBar":{
         "color":"#B4B4B4",
         "selectedColor":"#A5CE52",
+        "backgroundColor":"#FAF9F4",
         "list":[{
             "pagePath":"pages/index/index",
             "iconPath":"assets/img/00.png",
@@ -44,5 +47,17 @@
         "request": 10000,
         "downloadFile": 10000
     },
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "mp-dialog":"/weui/weui-miniprogram/dialog/dialog",
+        "mp-searchbar":"/weui/weui-miniprogram/searchbar/searchbar",
+        "mp-cell": "/weui/weui-miniprogram/cell/cell",
+        "mp-cells": "/weui/weui-miniprogram/cells/cells",
+        "mp-uploader": "/weui/weui-miniprogram/uploader/uploader",
+        "van-popup": "/weui/vant-weapp/popup/index",
+        "van-cell": "/weui/vant-weapp/cell/index",
+        "van-action-sheet": "/weui/vant-weapp/action-sheet/index"
+
+    
+      }
 }

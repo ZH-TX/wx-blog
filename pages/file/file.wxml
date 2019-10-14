@@ -1,2 +1,35 @@
 <!--pages/file/file.wxml-->
-<text>pages/file/file.wxml</text>
+<view class="header">
+    <image class="header-img" src="/assets/img/page1/椭圆 1.png" mode="scaleToFill" />
+    <view>玛丽缇娜</view>
+    <image class="header-s" src="/assets/img/page1/搜索.png" />
+        
+    
+</view>
+<view>
+    <text>共计28片日志,分布情况如下:</text>
+    <view class="content-item">
+        <view class="content-t">
+            <image class="content-img" src=""  />
+            <text>文章</text>
+            <text>15</text>
+        </view>
+        <view class="content-p">
+            <image class="content-img" src=""  />
+            <text>图片</text>
+            <text>10</text>
+        </view>
+        <view class="content-v">
+            <image class="content-img" src=""  />
+            <text>多媒体</text>
+            <text>3</text>
+        </view> 
+        
+    </view>
+    <view class="all-btn">
+        全部
+    </view>
+      
+      
+</view>
+  

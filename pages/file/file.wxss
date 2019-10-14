@@ -1,1 +1,43 @@
 /* pages/file/file.wxss */
+.header {
+    position: fixed;
+    height: 88rpx;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #FAF9F4;
+}
+
+.header-img {
+    width: 52rpx;
+    height: 52rpx;
+    border-radius: 50%;
+}
+
+.header-s {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+
+
+.content-item{
+    display: flex;
+    justify-content: space-around;
+
+}
+.content-img{
+    width: 50px;
+    height: 50px;
+}
+
+.all-btn{
+    text-align: center;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    color: #ffff;
+    background: #000;
+}
