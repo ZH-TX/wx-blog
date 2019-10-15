@@ -16,17 +16,20 @@ Page({
     },
 
 
-    onLoad: function (options) {
+    onLoad (){
+        wx.showShareMenu({
+            withShareTicket: true
+          })
 
     },
     addImg(){
         let that = this; 
         wx.chooseImage({
-        count: 2, // 默认9
-        sizeType: ['compressed'], // 可以指定是原图还是压缩图，默认二者都有
-        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-        success() {
-            that.upload();
+            count: 2, // 默认9
+            sizeType: ['compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success() {
+                that.upload();
             }
         })
     },
@@ -45,8 +48,41 @@ Page({
         //   })
         // 
     },
+    cancel(){
+        console.log("取消成功")
+    },
+    addTag(){
+        wx.showToast({
+            title:"保存失败",
+            icon:'loading',
+            duration:2000
+        })
+       
+    },
+    onSelect(){
+        console.log(this);
+        this.addTag() 
 
-
+    },
+    onCancel(){
+       this.setData({
+           show:false
+        })
+    },
+    send(){
+        let that=this
+        wx.showModal({
+            title: '提示',
+            content: '确定是否发送',
+            success (res) {
+              if (res.confirm) {
+                that.addTag()
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+        })
+    },
     showPop() {
         this.setData({
             show: true

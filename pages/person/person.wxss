@@ -1,4 +1,17 @@
 
+page{
+    height: 100%;
+    background: #F2F5F5;
+}
+.header{
+    height: 128rpx;
+    background: #faf9f4;
+}
+.header-set-img{
+    position: absolute;
+    top: 38px;
+    left: 20px;
+}
 .header-img{
     width: 58px;
     height: 58px;
@@ -6,11 +19,19 @@
 .sex{
     width: 13px;
     height: 13px;
+    padding-left: 15px;
 }
 
-
+.person-info{
+    position: absolute;
+    top: 70px;
+    left: 95px;
+}
+.name-info{
+    font-size: 11px;
+    color: #B2B2B2;
+}
 .main{
-    height: 100%;
     background: #F2F5F5;
 }
 
@@ -28,10 +49,10 @@
     align-items: center;
     width: 319px;
     height: 38px;
-    border-radius: 10px;
+    border-radius: 20px;
     background: #ffff;
     margin: 10px;
-   
+
 }
 .content-lf{
     display: flex;
@@ -40,6 +61,7 @@
 .arrow {
     width: 4px;
     height: 7px;
+    padding-right: 17px;
 }
 .content-img{
     width: 17px;

@@ -5,17 +5,30 @@
   	<view>
 		<view class="header">
 			<view class="header-left">
-				<image hidden="{{isInput}}" class="header-img" src="/assets/img/page1/椭圆 1.png" mode="scaleToFill" />
+				<image hidden="{{isInput}}" class="header-img" src="/assets/img/home/head.png" mode="scaleToFill" />
 				<text  class="header-name">玛丽缇娜</text>
-				<image class="pull" src="/assets/img/page1/下拉.png"></image>
+				<image class="pull" src="/assets/img/home/pull.png" bindtap="pull"></image>
+				<view hidden="{{!isPull}}" >
+					<view class="triangle">	</view>
+					<view class="hiden-info">
+						<view class="hiden">
+							<image class="attention" src="/assets/img/home/attention.png"></image>
+							<text class="attention-font">添加关注</text>
+						</view>
+						<view class="hiden">
+							<image class="attention chat" src="/assets/img/home/chat.png"></image>
+							<text class="attention-font">私信给TA</text> 
+						</view>
+					</view>
+				</view> 
 			</view>
 			<view class="header-right {{!isInput?'header-search':'active-search'}}">
-				<image class="search-img" src="/assets/img/page1/搜索.png"  />
+				<image class="search-img" src="/assets/img/home/search.png"  />
 		  
-				<input class="input" placeholder-class="ph-font" type ="text" placeholder="关键词,标签" bindtap="tap" />
-				<image hidden="{{!isInput}}" class="search-cancel" src="/assets/img/page1/取消.png" bindtap="cancel" />
+				<input class="input" placeholder-class="ph-font" type ="text" placeholder="关键词,标签"bindinput="changeInput" value="{{value}}" bindtap="tap" />
+				<image hidden="{{!isInput}}" class="search-cancel" src="/assets/img/home/cancel.png" bindtap="cancel" />
 				  
-				<!-- <image class="header-link" src="/assets/img/page1/链接 (2).png" mode="aspectFit" 
+				<!-- <image class="header-link" src="/assets/img/home/链接 (2).png" mode="aspectFit" 
 				bindtap="shareLink"/> -->
 			</view>
 			<view wx:if="{{isInput}}" class="search-item"> 
@@ -30,48 +43,54 @@
 		<view class="content">
 			<view class="content-info">
 				<view class="content-pic">
-					<image class="content-img img-left" src="/assets/img/page1/AI.png" />
-					<image class="content-img" src="/assets/img/page1/AI2.png" />
+					<image class="content-img img-left" src="/assets/img/home/AI.png" />
+					<image class="content-img" src="/assets/img/home/AI2.png" />
 				</view>
 				<view class="font">AI技术在智能海报设计中的应用越来越广泛</view>
 				<view class="tag-info">
 					<view>
-						<image class="tag-img" src="/assets/img/page1/标签.png" />
+						<image class="tag-img" src="/assets/img/home/tag.png" />
 						<text class="tag-font">AI , </text>
 						<text class="tag-font">计算机视觉 , </text>
 						<text class="tag-font">算法</text>
 					</view>
 					<view>
-						<image class="tag-img1" src="/assets/img/page1/日历.png" />
+						<image class="tag-img1" src="/assets/img/home/calendar.png" />
 						<text class="tag-time">2019.10.10</text>
 					</view>
 				</view>
 				<view class="talk">
 					<view class="talk-lf">
-						<image class="talk-img" src="/assets/img/page1/头像3.png"></image>
-						<image class="talk-img" src="/assets/img/page1/头像4.png"></image>
-						<image class="talk-img" src="/assets/img/page1/头像5.png"></image>
+						<image class="talk-img" src="/assets/img/home/head3.png"></image>
+						<image class="talk-img" src="/assets/img/home/head4.png"></image>
+						<image class="talk-img" src="/assets/img/home/head5.png"></image>
 						<text class="talk-like">等7人喜欢 </text>
 					</view>
-					<view class="talk-rg" bindtap="changeImg">
-						<image class="talk-img" src="/assets/img/page1/图层 6.png"  hidden="{{isActive}}" ></image>
-						<image class="talk-img active" src="/assets/img/page1/喜欢.png" hidden="{{!isActive}}"></image>
-						<image class="talk-img talk-img-rg" src="/assets/img/page1/转发.png"></image>
+					<view class="talk-rg" >
+						<image class="talk-img" src="/assets/img/home/like-active.png"  hidden="{{isActive}}" bindtap="changeImg" ></image>
+						<image class="talk-img active" src="/assets/img/home/like.png" hidden="{{!isActive}}" bindtap="changeImg"></image>
+						<image class="talk-img talk-img-rg" src="/assets/img/home/forward.png" bindtap="shareLink"></image>
 					</view>
 				</view>
 				<view class="talk-font">
-
 					<text>华美: <text class="talk-font-c" >写的很棒!</text></text>
 					<text>Jerry: <text class="talk-font-c" >是啊,现在AI领域很流行</text></text>
 					<text>进击的橙子: <text class="talk-font-c" >理解的很深刻</text></text>
-					<text class="talk-comment"> 共6条评论</text>
+					<navigator class=""  url=""  open-type="navigate">
+						<view class="talk-comment"> 共6条评论</view>
+					</navigator>
 				</view>
-				<view class="talk-input">
-					<input type="text" placeholder-class="like-input" placeholder="喜欢就评论告诉TA" />
-					<image class="talk-info-img" src="/assets/img/page1/评论.png" />
-
+				<view class="send-change">
+					<view class="talk-input {{!isComment? 'comment': 'active-comment'}}">
+						<input type="text" placeholder-class="like-input" bindtap="sendComment" value="{{value2}}" placeholder="喜欢就评论告诉TA" />
+						<image class="talk-info-img" src="/assets/img/home/comment.png" />
+					</view>
+					<view hidden="{{!isComment}}" class="comment-send-font" bindtap="sendInfo">
+						发送
+					</view>
 				</view>
-
+				  
+				
 			</view>
 		</view>
 		<!-- 展示第二个 -->
@@ -89,31 +108,30 @@
 				
 				<view class="tag-info">
 					<view>
-						<image class="tag-img" src="/assets/img/page1/标签.png" />
+						<image class="tag-img" src="/assets/img/home/tag.png" />
 						<text class="tag-font">NLP , </text>
 						<text class="tag-font">深度学习 , </text>
 						<text class="tag-font">用户平台</text>
 					</view>
 					<view>
-						<image class="tag-img1" src="/assets/img/page1/日历.png" />
+						<image class="tag-img1" src="/assets/img/home/calendar.png" />
 						<text class="tag-time">2019.10.10</text>
 					</view>
 				</view>
 				<view class="talk">
 					<view class="talk-lf">
-						<image class="talk-img" src="/assets/img/page1/头像3.png"></image>
-						<image class="talk-img" src="/assets/img/page1/头像4.png"></image>
-						<image class="talk-img" src="/assets/img/page1/头像5.png"></image>
+						<image class="talk-img" src="/assets/img/home/head3.png"></image>
+						<image class="talk-img" src="/assets/img/home/head4.png"></image>
+						<image class="talk-img" src="/assets/img/home/head5.png"></image>
 						<text class="talk-like">等7人喜欢 </text>
 					</view>
-					<view class="talk-rg" bindtap="changeImg">
-						<image class="talk-img" src="/assets/img/page1/图层 6.png"  hidden="{{isActive}}" ></image>
-						<image class="talk-img active" src="/assets/img/page1/喜欢.png" hidden="{{!isActive}}"></image>
-						<image class="talk-img talk-img-rg" src="/assets/img/page1/转发.png"></image>
+					<view class="talk-rg" >
+						<image class="talk-img" src="/assets/img/home/like-active.png"  hidden="{{isActive}}" bindtap="changeImg" ></image>
+						<image class="talk-img active" src="/assets/img/home/like.png" hidden="{{!isActive}}" bindtap="changeImg"></image>
+						<image class="talk-img talk-img-rg" src="/assets/img/home/forward.png" bindtap="shareLink"></image>
 					</view>
 				</view>
 				<view class="talk-font">
-
 					<text>华美: <text class="talk-font-c" >写的很棒!</text></text>
 					<text>Jerry: <text class="talk-font-c" >是啊,现在AI领域很流行</text></text>
 					<text>进击的橙子: <text class="talk-font-c" >理解的很深刻</text></text>
@@ -121,21 +139,16 @@
 				</view>
 				<view class="talk-input">
 					<input type="text" placeholder-class="like-input" placeholder="喜欢就评论告诉TA"  />
-					<image class="talk-info-img" src="/assets/img/page1/评论.png" />
-
+					<image class="talk-info-img" src="/assets/img/home/comment.png" />
 				</view>
-
 			</view>
 		</view>
-
-
-		
 	</view>
 	<!-- 加号 -->
-	<!-- <button open-type="share">测试share功能</button> -->
+	<button open-type="share">测试share功能</button>
 	<view class="add">
 		<navigator class="" url="/pages/daily/daily" hover-class="navigator-hover" open-type="navigate">
-			<image class="add-img" src="/assets/img/page1/加号.png" bindtap="addMore"></image>
+			<image class="add-img" src="/assets/img/home/add.png" bindtap="addMore"></image>
 		</navigator>
 
 

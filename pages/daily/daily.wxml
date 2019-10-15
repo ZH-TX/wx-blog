@@ -1,7 +1,7 @@
 <view class="header">
-    <view class="">取消</view>
-    <view class="">创建日志</view>
-    <view class="header-send">发 布</view>
+    <view class="header-cancel" bindtap="cancel">取消</view>
+    <view class="header-create">创建日志</view>
+    <view class="header-send" bindtap="send">发 布</view>
 </view>
 
 <view class="daily-main">
@@ -24,23 +24,20 @@
         
             <view class="add-tag"> 
                 <image class="add-tag-img" src="/assets/img/tag.png"/>
-                <view class="add-tag-font" >
+                <view class="add-tag-font" bindtap="addTag" >
                     添加标签
                 </view>
             </view>
         </view>   
     </view>
 
-    <view>
-        hhh
-    </view>
       
 </view>
  <view class="save-draft" bindtap="showPop">
         存为草稿
 </view>
 <van-action-sheet show="{{ show }}" actions="{{ actions }}"bind:close="onClose"
-  bind:select="onSelect" cancel-text="取消">
+  bind:select="onSelect" bind:cancel="onCancel" cancel-text="取消">
    
 </van-action-sheet>
 

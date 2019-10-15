@@ -1,34 +1,49 @@
 <!--pages/file/file.wxml-->
 <view class="header">
-    <image class="header-img" src="/assets/img/page1/椭圆 1.png" mode="scaleToFill" />
-    <view>玛丽缇娜</view>
-    <image class="header-s" src="/assets/img/page1/搜索.png" />
+    <view>
         
-    
+    </view>
+    <view class="header-center">
+        <image class="header-img" src="/assets/img/home/head.png" mode="scaleToFill" />
+        <view>玛丽缇娜</view>
+    </view>
+    <image class="header-s" src="/assets/img/home/search.png" />
+  
 </view>
-<view>
-    <text>共计28片日志,分布情况如下:</text>
+<view class="content">
+    <view class="content-font">共计28片日志,分布情况如下:</view>
     <view class="content-item">
-        <view class="content-t">
-            <image class="content-img" src=""  />
-            <text>文章</text>
-            <text>15</text>
+        <view class="content-common content-t">
+            <view class="content-img">
+                <image class="img-set" src="/assets/img/article.png"  />
+            </view>
+            <view class="content-info">文章</view>
+            <view class="content-info">15</view>
         </view>
-        <view class="content-p">
-            <image class="content-img" src=""  />
-            <text>图片</text>
-            <text>10</text>
+        <view class="content-common content-p">
+            <view class="content-img">
+                <image class="img-set" src="/assets/img/picture.png"  />
+            </view>
+            <view class="content-info">图片</view>
+            <view class="content-info">10 </view>
         </view>
-        <view class="content-v">
-            <image class="content-img" src=""  />
-            <text>多媒体</text>
-            <text>3</text>
+        <view class="content-common content-v">
+            <view class="content-img">
+                <image class="img-set" src="/assets/img/media.png"  />
+            </view>
+            <view class="content-info">多媒体</view>
+            <view class="content-info">3</view>  
         </view> 
-        
     </view>
-    <view class="all-btn">
-        全部
-    </view>
+    <navigator class="" url="" open-type="navigate" hover-class="none">
+        <view class="all-btn ">
+            全部
+        </view>   
+    </navigator>
+
+    <!-- <van-steps steps="{{ steps }}" direction="vertical"></van-steps> -->
+      
+    
       
       
 </view>

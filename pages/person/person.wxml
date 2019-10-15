@@ -1,61 +1,46 @@
-<!--pages/person/person.wxml-->
+<!-- pages/person/person.wxml -->
 <view>
-    <image class="header-img" src="" />
-    <view>
-        <view class="name"></view>
-        <image class="sex"></image>
-        <view class="name-info"> </view>
-
+    <view class="header">
+        <view class="header-set-img">
+            <image class="header-img" src="/assets/img/person/head.png" />
+        </view>
+    </view>
+    <view class="person-info">
+        <text class="name">玛丽缇娜</text>
+        <image class="sex" src="/assets/img/person/gril.png"></image>
+        <view class="name-info">常在河边走,哪有不湿鞋</view>
     </view>
 </view>
-
 <!-- 主体 -->
 <view class="main">
     <view class="main-layout">
         <view class="content-layout">
             <view class="content-lf">
-                <image class="content-img" src="/assets/img/page4/person.png" />
-                <view>
-                    我的关注
-                </view>
-
+                <image class="content-img" src="/assets/img/person/person.png" />
+                <view>我的关注</view>
             </view>
             <image class="arrow" src="/assets/img/arrow.png"></image>
-
         </view>
         <view class="content-layout">
             <view class="content-lf">
-                <image class="content-img" src="/assets/img/page4/like.png" />
-                <view>
-                    我的点赞
-                </view>
-
+                <image class="content-img" src="/assets/img/person/like.png" />
+                <view>我的点赞</view>
             </view>
             <image class="arrow" src="/assets/img/arrow.png"></image>
-
         </view>
         <view class="content-layout">
             <view class="content-lf">
-                <image class="content-img" src="/assets/img/page4/editor.png" />
-                <view>
-                    我的草稿
-                </view>
-
+                <image class="content-img" src="/assets/img/person/editor.png" />
+                <view>我的草稿</view>
             </view>
             <image class="arrow" src="/assets/img/arrow.png"></image>
-
         </view>
         <view class="content-layout">
             <view class="content-lf">
-                <image class="content-img" src="/assets/img/page4/setting.png" />
-                <view>
-                    编辑资料
-                </view>
-
+                <image class="content-img" src="/assets/img/person/setting.png" />
+                <view>编辑资料</view>
             </view>
             <image class="arrow" src="/assets/img/arrow.png"></image>
-
         </view>
     </view>
-
 </view>

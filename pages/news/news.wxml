@@ -1,29 +1,69 @@
-<!--pages/news/news.wxml-->
+<!-- pages/news/news.wxml -->
 <view class="header">
-    <view>
+    <view class="header-layout">
         <image class="header-img" src="/assets/img/tip.png" mode="scaleToFill" />
-        <view>消息通知</view>
-
+        <view class="header-font">消息通知</view>
     </view>
-
-
 </view>
 <view class="content">
     <view>
         <view>
-            <image class="" src=""  />
-            <view>
-                <text></text>
-                <text></text>
-                <text></text>
-                <text></text>
+            <view class="content-list">
+                <image class="content-img" src="/assets/img/news/header1.png" />
+                <view>
+                    <view>凉生有幸</view>
+                    <view class="list-color1">关注了你</view>
+                </view>
+                <view class="list-center">
+                    <view></view>
+                    <view></view>
+                </view>
+                <view>
+                    <view class="list-time">10月05日</view>
+                </view>
             </view>
-            <view>
-                
+            <view class="content-list">
+                <image class="content-img" src="/assets/img/news/header2.png" />
+                <view>
+                    <view>凉生有幸</view>
+                    <view class="list-color2">评论了你</view>
+                </view>
+                <view class="list-center">
+                    <view class="list-title">AI技术在智能海波啊设计中的应用越来越广泛</view>
+                    <view class="list-content">博主你分享的图片真好看</view>
+                </view>
+                <view>
+                    <view class="list-time">10月05日</view>
+                </view>
             </view>
-              
-              
+            <view class="content-list">
+                <image class="content-img" src="/assets/img/news/header2.png" />
+                <view>
+                    <view>总喜欢你</view>
+                    <view class="list-color3">喜欢了你</view>
+                </view>
+                <view class="list-center">
+                    <view class="list-title">深度学习在探索业务中的探索与实践</view>
+                    <view></view>
+                </view>
+                <view>
+                    <view class="list-time">10月05日</view>
+                </view>
+            </view>
+            <view class="content-list">
+                <image class="content-img" src="/assets/img/news/header3.png" />
+                <view>
+                    <view>竹盖子</view>
+                    <view class="list-color4">私信了你</view>
+                </view>
+                <view class="list-center">
+                    <view class="list-title"></view>
+                    <view>博主,我能和你交个朋友吗?</view>
+                </view>
+                <view>
+                    <view class="list-time">10月05日</view>
+                </view>
+            </view>
         </view>
     </view>
 </view>
-  

@@ -20,26 +20,26 @@
         "backgroundColor":"#FAF9F4",
         "list":[{
             "pagePath":"pages/index/index",
-            "iconPath":"assets/img/00.png",
-            "selectedIconPath":"assets/img/01.png",
+            "iconPath":"assets/img/home.png",
+            "selectedIconPath":"assets/img/home-active.png",
             "text":"首页"
         },
         {
             "pagePath":"pages/file/file",
-            "iconPath":"assets/img/10.png",
-            "selectedIconPath":"assets/img/11.png",
+            "iconPath":"assets/img/page.png",
+            "selectedIconPath":"assets/img/page-active.png",
             "text":"归档"
         },
         {
             "pagePath":"pages/news/news",
-            "iconPath":"assets/img/20.png",
-            "selectedIconPath":"assets/img/21.png",
+            "iconPath":"assets/img/info.png",
+            "selectedIconPath":"assets/img/info-active.png",
             "text":"消息"
         },
         {
             "pagePath":"pages/person/person",
-            "iconPath":"assets/img/30.png",
-            "selectedIconPath":"assets/img/31.png",
+            "iconPath":"assets/img/person.png",
+            "selectedIconPath":"assets/img/person-active.png",
             "text":"个人"
         }
     ]},
@@ -56,7 +56,8 @@
         "mp-uploader": "/weui/weui-miniprogram/uploader/uploader",
         "van-popup": "/weui/vant-weapp/popup/index",
         "van-cell": "/weui/vant-weapp/cell/index",
-        "van-action-sheet": "/weui/vant-weapp/action-sheet/index"
+        "van-action-sheet": "/weui/vant-weapp/action-sheet/index",
+        "van-steps": "/weui/vant-weapp/steps/index"
 
     
       }
