@@ -53,7 +53,7 @@ Page({
     },
     addTag(){
         wx.showToast({
-            title:"保存失败",
+            title:"添加失败",
             icon:'loading',
             duration:2000
         })
@@ -71,17 +71,25 @@ Page({
     },
     send(){
         let that=this
-        wx.showModal({
-            title: '提示',
-            content: '确定是否发送',
-            success (res) {
-              if (res.confirm) {
-                that.addTag()
-              } else if (res.cancel) {
-                console.log('用户点击取消')
-              }
-            }
-        })
+        // wx.showModal({
+        //     title: '提示',
+        //     content: '确定是否发送',
+        //    success (res) {
+        //       if (res.confirm) {
+        //         that.addTag()     
+        //       } else if (res.cancel) {
+        //         console.log('用户点击取消')
+        //       }
+        //     }
+        // })
+        wx.navigateTo({
+            url: '../success/success',
+            success: (result) => {
+                
+            },
+            fail: () => {},
+            complete: () => {}
+        });
     },
     showPop() {
         this.setData({

@@ -1,15 +1,16 @@
 <!-- 头部(未做) -->
 <view>
-    <image class="" src="" /> 
+    12345645
+    <!-- <image class="" src="" /> 
     <view>
         <view class="name"></view> <image class="sex"></image>
         <view class="name-info"> </view>
           
-    </view>
+    </view> -->
 </view>
 
 <!-- 主体 -->
-<view>
+<!-- <view>
     <view class="content-layout">
         <view>
             <image class="" src=""  />
@@ -23,4 +24,4 @@
         
           
     </view>
-</view>
+</view> -->

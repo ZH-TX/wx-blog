@@ -3,47 +3,37 @@
     <view class="header-create">创建日志</view>
     <view class="header-send" bindtap="send">发 布</view>
 </view>
-
 <view class="daily-main">
     <view class="content">
-    
         <view class="page-section-title">
             <view class="title-t">
-                <text class="" style="color:red;">*</text>
-                <text class="">标题</text>
+                <view class="" style="color:red;">*</view>
+                <view class="title-title">标题:</view>
             </view>
-            <textarea class="title-text" placeholder="在此输入标题" auto-height></textarea>
+            <textarea class="title-text" placeholder-class="text-placeholder" placeholder="在此输入标题"style="height:20px;"></textarea>
         </view>
         <view class="page-section-write">
             <text class="">内容:</text>
-            <textarea class="" placeholder="在此输入你想说的话"></textarea>
+            <textarea class="" placeholder-class="text-placeholder" placeholder="在此输入你想说的话"></textarea>
         </view>
-
         <view class="bottom-content">
             <image class="add-pic" src="/assets/img/pic.png" bindtap="addImg"></image>
-        
-            <view class="add-tag"> 
-                <image class="add-tag-img" src="/assets/img/tag.png"/>
-                <view class="add-tag-font" bindtap="addTag" >
-                    添加标签
-                </view>
+            <view class="add-tag">
+                <image class="add-tag-img" src="/assets/img/tag.png" />
+                <view class="add-tag-font" bindtap="addTag">添加标签</view>
             </view>
-        </view>   
+        </view>
     </view>
-
-      
 </view>
- <view class="save-draft" bindtap="showPop">
-        存为草稿
-</view>
-<van-action-sheet show="{{ show }}" actions="{{ actions }}"bind:close="onClose"
-  bind:select="onSelect" bind:cancel="onCancel" cancel-text="取消">
-   
-</van-action-sheet>
-
-
+<view class="save-draft" bindtap="showPop">存为草稿</view>
+<van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" bind:cancel="onCancel" cancel-text="取消"></van-action-sheet>
 <!-- <van-cell title="存为草稿" is-link bind:click="showPop" />
 <van-popup show="{{ show }}" bindclose="onClose" position="buttom" custom-style="height:292rpx">
     <view>123445</view>
     <view>123445</view>
 </van-popup> -->
+
+
+
+
+

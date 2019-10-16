@@ -1,0 +1,14 @@
+<!--pages/all/all.wxml-->
+<view class="header">
+    <view>
+        
+    </view>
+    <view class="header-center">
+        <!-- <image class="header-img" src="/assets/img/home/head.png" mode="scaleToFill" /> -->
+        <view>全部</view>
+    </view>
+    <image class="header-s" src="/assets/img/home/search.png" />
+  
+</view>
+
+<van-steps custom-class="main" steps="{{ steps }}" direction="vertical"></van-steps>

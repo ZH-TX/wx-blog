@@ -75,6 +75,7 @@ page{
 	width: 9px;
 	height: 9px;
 	margin: 20rpx;
+	flex-shrink: 0;
 }
 
 .search-item {
@@ -84,6 +85,15 @@ page{
 	background: #FAF9F4;
 	width: 100vw;
 	height: 142rpx;
+	z-index: 9;
+}
+.search-data{
+	font-size: 20rpx;
+	padding: 30rpx auto;
+}
+
+.deep-color{
+	background: #E1F0F2;
 }
 
 .header-img {
@@ -110,11 +120,11 @@ page{
 }
 .hiden-info{
 	position: absolute;
-	top: 45px;
-	left: 70px;
-	width: 60px;
-	height: 52px;
-	border-radius: 3px;
+	top: 90rpx;
+	left: 90rpx;
+	width: 172rpx;
+	height: 150rpx;
+	border-radius: 10rpx;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-around;
@@ -129,6 +139,12 @@ page{
     border-style:solid;
     border-width:5px;
 }
+
+.line{
+	height: 1px;
+	width: 85%;
+	background:rgba(181,181,181,1);
+}
 /* .hiden-info::before{
 	content: "";
 	position: relative;
@@ -139,24 +155,47 @@ page{
     border-width:5px;
 } */
 .attention{
-	width: 9px;
-	height: 9px;
+	width: 26rpx;
+	height: 26rpx;
 }
 .attention-font{
-	font-size: 8px;
+	font-size: 24rpx;
 	color: #FEFEFE;
 	padding-left: 5px;
 }
+
+.no-content{
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	text-align: center;
+	align-items: center;
+
+}
+.no-content-img{
+	margin-top: 139px;
+	width: 96px;
+	height: 64px;
+	
+}
+
+.no-content-font{
+	font-size: 12px;
+	margin-top: 36px;
+	color: #B4B4B4;
+}
+
 .main {
-	/* height: 100vh; */
 	background: #F3F5F5;
 }
+
 .content {
 	margin: 20rpx 38rpx;
 	margin-top: 108rpx;
 	background: #ffff;
-	height: 700rpx;
+	/* height: 700rpx; */
 	border-radius: 3px;
+	/* padding: 20rpx */
 }
 
 .content-info {
@@ -190,9 +229,14 @@ page{
 .tag-info {
 	display: flex;
 	justify-content: space-between;
-
+	
 }
-
+.tag-info  text{
+	text-decoration: underline;
+}
+.tag-info .tag-time{
+	text-decoration: none;
+}
 .tag-img {
 	width: 8px;
 	height: 7px;
@@ -227,8 +271,7 @@ page{
 }
 
 .talk-rg {
-	margin-right: 26px;
-
+	/* margin-right: 26px; */
 }
 
 .talk-img {
@@ -298,8 +341,12 @@ page{
 
 }
 .comment-send-font{
-	font-size: 10px;
-	margin-right:10px ;
+	font-size: 20rpx;
+	margin-right:20rpx ;
+	height: 32rpx;
+	background: #F3F5F5;
+	border: 1px solid #F3F5F5;
+	border-radius: 3px;
 }
 .add {
 	position: fixed;
@@ -321,8 +368,21 @@ page{
 .content-acticle {
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: normal;
-	-webkit-line-clamp: 2;
+	display:-webkit-box;  
+	-webkit-box-orient:vertical; 
+	-webkit-line-clamp:2; 
 	font-size: 12px;
 	color: #898989;
+}
+
+.overflow-font{
+	position: relative;
+	width: 24px;
+	margin-top: -18px;
+	margin-left: 280px;
+	font-size: 24rpx;
+	color: rgb(64, 85, 128);
+	background-image:-webkit-linear-gradient(top,hsla(0,0%,100%,.5),#fff);
+	background-image:linear-gradient(180deg,hsla(0,0%,100%,.5),#fff);
+
 }

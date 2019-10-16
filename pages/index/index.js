@@ -10,7 +10,9 @@ Page({
 		isPull:false,
 		value:'',
 		value2:'',
-		isComment:false
+		isComment:false,
+		isContent:false,
+		overHeight:false,
 
 	},
 
@@ -68,6 +70,13 @@ Page({
 		// })
 
 	},
+	blur(e){
+		// console.log(e)
+		this.setData({
+			isInput: false,
+			isComment:false
+		})
+	},
 	pull(){
 		this.setData({
 			isPull:!this.data.isPull
@@ -91,6 +100,23 @@ Page({
 			isInput:false,
 			value:null
 		})
+	},
+	navTo(){
+		
+		wx.navigateTo({
+			url: '../detail/detail',
+			success: (result) => {
+				
+			},
+			fail: () => {},
+			complete: () => {}
+		});
+		wx.showToast({
+			title:'数据加载中...',
+			icon:'loading',
+			duration: 2000
+		})
+		  
 	},
 	search(value) {
 		return new Promise((resolve, reject) => {

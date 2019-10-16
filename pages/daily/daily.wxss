@@ -42,7 +42,7 @@ page{
 .content {
   margin: 20rpx 38rpx;
   margin-top: 108rpx;
-  height: 740rpx;
+  /* height: 740rpx; */
   border-radius: 3px;
   background: #ffff;
 }
@@ -50,20 +50,30 @@ page{
 .page-section-title {
   display: flex;
   align-items: center;
-  padding-bottom: 26rpx;
+  padding: 26rpx auto;
   border-bottom: 1px solid #B4B4B4;
 
 }
 
 .page-section-write {
-  /* display: flex; */
-  /* align-items: center; */
-
 
 }
 
+.text-placeholder{
+  font-size: 12px;
+  line-height: 12px;
+}
+
 .title-t {
-  width: 42px;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.title-title{
+  flex-shrink: 0;
 }
 
 .title-text {
@@ -73,13 +83,22 @@ page{
 
 .save-draft {
   color: #B4B4B4;
-  text-align: right;
-  padding-right: 32rpx;
+  /* text-align: right; */
+  float: right;
+  border: 1px solid ;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 32rpx;
+  font-size: 12px;
+}
+.save-draft::after{
+  clear: both;
 }
 
 .bottom-content{
   /* display: flex; */
   /* align-items: baseline; */
+  padding-bottom: 10px;
 }
 .add-pic{
   width: 108px;

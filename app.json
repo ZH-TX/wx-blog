@@ -5,13 +5,17 @@
         "pages/news/news",
         "pages/person/person",
         "pages/daily/daily",
-        "pages/detail/detail"
+        "pages/detail/detail",
+        "pages/comment/comment",
+        "pages/like/like",
+        "pages/success/success",
+        "pages/all/all"
         
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
+        "navigationBarTitleText": "",
         "navigationBarTextStyle": "black"
     },
     "tabBar":{
@@ -54,6 +58,7 @@
         "mp-cell": "/weui/weui-miniprogram/cell/cell",
         "mp-cells": "/weui/weui-miniprogram/cells/cells",
         "mp-uploader": "/weui/weui-miniprogram/uploader/uploader",
+        "mp-msg":"weui/weui-miniprogram/msg/msg",
         "van-popup": "/weui/vant-weapp/popup/index",
         "van-cell": "/weui/vant-weapp/cell/index",
         "van-action-sheet": "/weui/vant-weapp/action-sheet/index",

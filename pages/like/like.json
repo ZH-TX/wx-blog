@@ -1,7 +1,8 @@
 {
-  "backgroundTextStyle": "light",
+  "backgroundTextStyle": "dark",
   "navigationBarBackgroundColor": "#fff",
-  "navigationBarTitleText": "日志详情",
+  "navigationBarTitleText": "点赞",
   "navigationBarTextStyle": "black",
+  "enablePullDownRefresh":true,
   "usingComponents": {}
 }

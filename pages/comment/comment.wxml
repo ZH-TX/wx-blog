@@ -1,0 +1,75 @@
+<!--pages/comment/comment.wxml-->
+<view class="content">
+    <view>
+        <view>
+            <view class="content-list" hover-class="hover-class"  bindtap="showInput">
+                <image class="content-img" src="/assets/img/news/header1.png" />
+                <view class="content-head-c">
+                    <view class="head-name">凉生有幸</view>
+                    <view class="list-color1">博主是一个有文化的人</view>
+                </view>
+                <view class="list-center">
+                    <view></view>
+                    <view></view>
+                </view>
+                <view>
+                    <view class="list-time">10月05日</view>
+                </view>
+            </view>
+            <view class="content-list"hover-class="hover-class"  bindtap="showInput">
+                <image class="content-img" src="/assets/img/news/header2.png" />
+                <view class="content-head-c">
+                    <view class="head-name">凉生有幸</view>
+                    <view class="list-color1">博主分享的文章真不错</view>
+                </view>
+                <view class="list-center">
+                    <view class="list-title"></view>
+                    <view class="list-content"></view>
+                </view>
+                <view>
+                    <view class="list-time">10月05日</view>
+                </view>
+            </view>
+            <view class="content-list"hover-class="hover-class"  bindtap="showInput">
+                <image class="content-img" src="/assets/img/news/header2.png" />
+                <view class="content-head-c">
+                    <view class="head-name">总喜欢你</view>
+                    <view class="list-color1">博主我很赞同你的说法</view>
+                </view>
+                <view class="list-center">
+                    <view class="list-title"></view>
+                    <view></view>
+                </view>
+                <view>
+                    <view class="list-time">10月05日</view>
+                </view>
+            </view>
+            <view class="content-list"hover-class="hover-class"  bindtap="showInput">
+                <image class="content-img" src="/assets/img/news/header3.png" />
+                <view class="content-head-c">
+                    <view class="head-name">竹盖子</view>
+                    <view class="list-color1">博主我能和你交个朋友吗</view>
+                </view>
+                <view class="list-center">
+                    <view class="list-title"></view>
+                    <view></view>
+                </view>
+                <view>
+                    <view class="list-time">10月05日</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="input-section" wx:if="{{showInput}}">
+    <view>
+        <input class='input-input' value="{{inputMessage}}" focus="auto" placeholder="请输入内容"  bindblur="onHideInput" confirm-type="send"  />
+    </view>   
+  <view class="input-send" >
+    <view class="send_btn">
+      <text class="send_btn_text">发送</text>
+    </view>
+  </view>
+</view>
+

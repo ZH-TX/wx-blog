@@ -35,7 +35,7 @@
             <view class="content-info">3</view>  
         </view> 
     </view>
-    <navigator class="" url="" open-type="navigate" hover-class="none">
+    <navigator class="" url="../all/all" open-type="navigate" hover-class="none">
         <view class="all-btn ">
             全部
         </view>   

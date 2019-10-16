@@ -1,0 +1,69 @@
+<!--pages/like/like.wxml-->
+<view class="content">
+    <view>
+        <view>
+            <view class="content-list" hover-class="hover-class"  bindtap="showInput">
+                <image class="content-img" src="/assets/img/news/header1.png" />
+                <view class="content-head-c">
+                    <view class="head-name">凉生有幸</view>
+                    <view class="list-color1">凉风有幸秋月无边</view>
+                </view>
+                <view class="list-center">
+                    <view></view>
+                    <view></view>
+                </view>
+                <view>
+                    <view class="list-time"></view>
+                </view>
+            </view>
+            <view class="content-list"hover-class="hover-class"  bindtap="showInput">
+                <image class="content-img" src="/assets/img/news/header2.png" />
+                <view class="content-head-c">
+                    <view class="head-name">凉生有幸</view>
+                    <view class="list-color1">我喜欢看秋鸟集</view>
+                </view>
+                <view class="list-center">
+                    <view class="list-title"></view>
+                    <view class="list-content"></view>
+                </view>
+                <view>
+                    <view class="list-time"></view>
+                </view>
+            </view>
+            <view class="content-list"hover-class="hover-class"  bindtap="showInput">
+                <image class="content-img" src="/assets/img/news/header2.png" />
+                <view class="content-head-c">
+                    <view class="head-name">总喜欢你</view>
+                    <view class="list-color1">前方是绝路,希望在转角</view>
+                </view>
+                <view class="list-center">
+                    <view class="list-title"></view>
+                    <view></view>
+                </view>
+                <view>
+                    <view class="list-time"></view>
+                </view>
+            </view>
+            <view class="content-list"hover-class="hover-class"  bindtap="showInput">
+                <image class="content-img" src="/assets/img/news/header3.png" />
+                <view class="content-head-c">
+                    <view class="head-name">竹盖子</view>
+                    <view class="list-color1">业余正常人</view>
+                </view>
+                <view class="list-center">
+                    <view class="list-title"></view>
+                    <view></view>
+                </view>
+                <view>
+                    <view class="list-time"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<veiw class="footer" wx:if="{{show}}">
+    <view class="footer-color">
+        没有更多了
+    </view>
+      
+</veiw>

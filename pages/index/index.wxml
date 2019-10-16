@@ -4,17 +4,21 @@
 <view hidden="{{!isRefresh}}">
   	<view>
 		<view class="header">
-			<view class="header-left">
+			<view class="header-left" bindtap="pull">
 				<image hidden="{{isInput}}" class="header-img" src="/assets/img/home/head.png" mode="scaleToFill" />
 				<text  class="header-name">玛丽缇娜</text>
 				<image class="pull" src="/assets/img/home/pull.png" bindtap="pull"></image>
-				<view hidden="{{!isPull}}" >
+				<view hidden="{{!isPull}}">
 					<view class="triangle">	</view>
 					<view class="hiden-info">
 						<view class="hiden">
 							<image class="attention" src="/assets/img/home/attention.png"></image>
 							<text class="attention-font">添加关注</text>
 						</view>
+						<view class="line">
+							
+						</view>
+						  
 						<view class="hiden">
 							<image class="attention chat" src="/assets/img/home/chat.png"></image>
 							<text class="attention-font">私信给TA</text> 
@@ -25,24 +29,39 @@
 			<view class="header-right {{!isInput?'header-search':'active-search'}}">
 				<image class="search-img" src="/assets/img/home/search.png"  />
 		  
-				<input class="input" placeholder-class="ph-font" type ="text" placeholder="关键词,标签"bindinput="changeInput" value="{{value}}" bindtap="tap" />
+				<input class="input" placeholder-class="ph-font" type ="text" placeholder="关键词,标签"bindinput="changeInput" focus="auto"  value="{{value}}" bindtap="tap" />
 				<image hidden="{{!isInput}}" class="search-cancel" src="/assets/img/home/cancel.png" bindtap="cancel" />
 				  
 				<!-- <image class="header-link" src="/assets/img/home/链接 (2).png" mode="aspectFit" 
 				bindtap="shareLink"/> -->
 			</view>
-			<view wx:if="{{isInput}}" class="search-item"> 
-				暂无数据
+			<view wx:if="{{isInput}}" class="search-item">
+				<view>
+					暂无数据
+				</view>
+				<view class="search-data" hover-class="deep-color">数据1</view>
+				<view class="search-data" hover-class="deep-color">数据2</view>
 			</view>
 		</view>
 
   	</view>
 	<!-- 主体 -->
-
-	<view class="main">
+	<block wx:if="{{isContent}}">
+		<view class="no-content">
+			<image class="no-content-img" src="/assets/img/home/write.png"></image>
+			<view class="no-content-font">
+				快来创建你的日志分享你的生活吧
+			</view>
+		</view>
+	
+		
+	</block>
+	  
+	<block wx:else>
+		<view class="main">
 		<view class="content">
 			<view class="content-info">
-				<view class="content-pic">
+				<view class="content-pic" bindtap="navTo">
 					<image class="content-img img-left" src="/assets/img/home/AI.png" />
 					<image class="content-img" src="/assets/img/home/AI2.png" />
 				</view>
@@ -59,12 +78,16 @@
 						<text class="tag-time">2019.10.10</text>
 					</view>
 				</view>
+				
 				<view class="talk">
 					<view class="talk-lf">
 						<image class="talk-img" src="/assets/img/home/head3.png"></image>
 						<image class="talk-img" src="/assets/img/home/head4.png"></image>
 						<image class="talk-img" src="/assets/img/home/head5.png"></image>
-						<text class="talk-like">等7人喜欢 </text>
+						<navigator class="" target="" url="../like/like" hover-class="navigator-hover" open-type="navigate">
+							<text class="talk-like">等7人喜欢 </text> 
+						</navigator>
+						  
 					</view>
 					<view class="talk-rg" >
 						<image class="talk-img" src="/assets/img/home/like-active.png"  hidden="{{isActive}}" bindtap="changeImg" ></image>
@@ -76,13 +99,13 @@
 					<text>华美: <text class="talk-font-c" >写的很棒!</text></text>
 					<text>Jerry: <text class="talk-font-c" >是啊,现在AI领域很流行</text></text>
 					<text>进击的橙子: <text class="talk-font-c" >理解的很深刻</text></text>
-					<navigator class=""  url=""  open-type="navigate">
+					<navigator class=""  url="../comment/comment"  open-type="navigate">
 						<view class="talk-comment"> 共6条评论</view>
 					</navigator>
 				</view>
 				<view class="send-change">
 					<view class="talk-input {{!isComment? 'comment': 'active-comment'}}">
-						<input type="text" placeholder-class="like-input" bindtap="sendComment" value="{{value2}}" placeholder="喜欢就评论告诉TA" />
+						<input type="text" placeholder-class="like-input" bindtap="sendComment" focus="auto" bindblur="blur"  value="{{value2}}" placeholder="喜欢就评论告诉TA" />
 						<image class="talk-info-img" src="/assets/img/home/comment.png" />
 					</view>
 					<view hidden="{{!isComment}}" class="comment-send-font" bindtap="sendInfo">
@@ -96,15 +119,22 @@
 		<!-- 展示第二个 -->
 		<view class="content">
 			<view class="content-info">
-				<view class="content-text">
+				<view class="content-text" bindtap="navTo">
 					<view class="content-text-tit">
 						深度学习在探索业务中的探索与实践
 					</view>
 					<view class="content-acticle">
 						酒店搜索跟传统的搜索排序中存在很多不一样的地方,
 						酒店搜索业务局别独有的业务特点,本文分享了深度学习
+						酒店搜索业务局别独有的业务特点,本文分享了深度学习
+						酒店搜索业务局别独有的业务特点,本文分享了深度学习	
 					</view>
+					<!-- 这里设置这个会失效 -->
+			  		<!-- <view wx:if="!overHeight"  class="overflow-font">
+						全文
+					</view> -->
 				</view>
+				
 				
 				<view class="tag-info">
 					<view>
@@ -123,7 +153,9 @@
 						<image class="talk-img" src="/assets/img/home/head3.png"></image>
 						<image class="talk-img" src="/assets/img/home/head4.png"></image>
 						<image class="talk-img" src="/assets/img/home/head5.png"></image>
-						<text class="talk-like">等7人喜欢 </text>
+						<navigator class="" target="" url="../like/like" hover-class="navigator-hover" open-type="navigate">
+							<text class="talk-like">等7人喜欢 </text> 
+						</navigator>
 					</view>
 					<view class="talk-rg" >
 						<image class="talk-img" src="/assets/img/home/like-active.png"  hidden="{{isActive}}" bindtap="changeImg" ></image>
@@ -135,17 +167,27 @@
 					<text>华美: <text class="talk-font-c" >写的很棒!</text></text>
 					<text>Jerry: <text class="talk-font-c" >是啊,现在AI领域很流行</text></text>
 					<text>进击的橙子: <text class="talk-font-c" >理解的很深刻</text></text>
-					<text class="talk-comment"> 共6条评论</text>
+					<navigator class=""  url="../comment/comment"  open-type="navigate">
+						<view class="talk-comment"> 共6条评论</view>
+					</navigator>
 				</view>
-				<view class="talk-input">
-					<input type="text" placeholder-class="like-input" placeholder="喜欢就评论告诉TA"  />
-					<image class="talk-info-img" src="/assets/img/home/comment.png" />
+				<view class="send-change">
+					<view class="talk-input {{!isComment? 'comment': 'active-comment'}}">
+						<input type="text" placeholder-class="like-input" bindtap="sendComment" focus="auto"  value="{{value2}}" placeholder="喜欢就评论告诉TA" />
+						<image class="talk-info-img" src="/assets/img/home/comment.png" />
+					</view>
+					<view hidden="{{!isComment}}" class="comment-send-font" bindtap="sendInfo">
+						发送
+					</view>
 				</view>
 			</view>
 		</view>
-	</view>
+		</view>
+	</block>
+	  
+	
 	<!-- 加号 -->
-	<button open-type="share">测试share功能</button>
+	<!-- <button open-type="share">测试share功能</button> -->
 	<view class="add">
 		<navigator class="" url="/pages/daily/daily" hover-class="navigator-hover" open-type="navigate">
 			<image class="add-img" src="/assets/img/home/add.png" bindtap="addMore"></image>

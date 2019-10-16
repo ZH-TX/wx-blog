@@ -1,7 +1,11 @@
-// pages/file/file.js
+// pages/success/success.js
 Page({
+
+    /**
+     * 页面的初始数据
+     */
     data: {
- 
+
     },
 
     /**
