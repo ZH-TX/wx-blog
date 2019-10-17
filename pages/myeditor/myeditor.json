@@ -1,0 +1,8 @@
+{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的编辑",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true,
+    "usingComponents": {}
+}

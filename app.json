@@ -9,7 +9,11 @@
         "pages/comment/comment",
         "pages/like/like",
         "pages/success/success",
-        "pages/all/all"
+        "pages/all/all",
+        "pages/myattention/myattention",
+        "pages/mylike/mylike",
+        "pages/mydraft/mydraft",
+        "pages/myeditor/myeditor"
         
     ],
     "window": {
@@ -61,6 +65,7 @@
         "mp-msg":"weui/weui-miniprogram/msg/msg",
         "van-popup": "/weui/vant-weapp/popup/index",
         "van-cell": "/weui/vant-weapp/cell/index",
+        "van-cell-group":"/weui/vant-weapp/cell-group/index",
         "van-action-sheet": "/weui/vant-weapp/action-sheet/index",
         "van-steps": "/weui/vant-weapp/steps/index"
 

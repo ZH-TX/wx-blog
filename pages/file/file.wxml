@@ -12,7 +12,7 @@
 </view>
 <view class="content">
     <view class="content-font">共计28片日志,分布情况如下:</view>
-    <view class="content-item">
+    <view class="content-item" bindtap="navToDetail">
         <view class="content-common content-t">
             <view class="content-img">
                 <image class="img-set" src="/assets/img/article.png"  />

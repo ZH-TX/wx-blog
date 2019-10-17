@@ -1,9 +1,5 @@
-<mp-msg type="success" title="操作成功">
-    <!-- <view slot="desc">内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<navigator url="" class="weui-msg__link">文字链接</navigator></view>
-    <view slot="extend">
-        <view>1. 说明1</view>
-        <view>2. 说明2</view>
-    </view> -->
+<mp-msg type="" icon="/assets/img/success.png" title="操作成功">
+    
     <view slot="handle">
         <button class="weui-btn" type="primary">回到首页</button>
         <button class="weui-btn" type="default">继续编辑</button>

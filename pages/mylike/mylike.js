@@ -1,19 +1,10 @@
-// pages/success/success.js
+// pages/mylike/mylike.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        icon:['/assets/img/success.png','/assets/img/cancel.png'],
-        title:['发布成功','发布失败'],
-        font:[['回到首页','继续编辑'],['重新发布','存为草稿']],
-        //or
-    //     obj:{
-    //         success:{icon:'/assets/img/success.png',title:'发布成功',font:{回到首页,继续编辑},
-    //         cancel:{icon:'/assets/img/cancel.png',title:'发布失败',font:}
-    // }
-
 
     },
 

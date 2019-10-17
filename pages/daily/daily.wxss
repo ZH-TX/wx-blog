@@ -123,3 +123,23 @@ page{
   font-size: 10px;
   padding: 6px 8px;
 }
+
+.btn1{
+  color: #FFFFFF;
+  background: #0FC5B1;
+}
+
+.btn-sty{
+  border-radius: 20px;
+  width: 248px;
+  
+}
+.send-after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #ffff;
+}

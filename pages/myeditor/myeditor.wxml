@@ -1,0 +1,30 @@
+<!-- pages/myeditor/myeditor.wxml -->
+<view>
+    <view class="head-list">
+        <view>头像</view>
+        <view>
+            <image class="head-img" src="/assets/img/home/head.png" bindtap="changeImg" />
+        </view>
+    </view>
+    <view class="head-list">
+        <view>昵称</view>
+        <view>
+            <input class="input-set" type="text" placeholder="" value="{{value1}}" maxlength="140"></input>
+            <!-- 玛丽缇娜 -->
+        </view>
+    </view>
+    <view class="head-list">
+        <view>签名</view>
+        <view>
+            <input type="text" class="input-set1" value="{{value2}}" />
+            <!-- 常在河边走,哪有不湿鞋 -->
+        </view>
+    </view>
+    <view class="head-list">
+        <view>性别</view>
+        <view bindtap="changeSex">
+            <image wx:if="{{sex === 0}}" class="sex-img" src="/assets/img/girl.png" />
+            <image wx:if="{{sex === 1}}" class="sex-img" src="/assets/img/man.png" />
+        </view>
+    </view>
+</view>

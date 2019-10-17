@@ -3,6 +3,7 @@ Page({
     data: {
         pics: [],
         show: false,
+        isSend:false,
         actions: [{
                 name: '选项1'
             },
@@ -25,28 +26,68 @@ Page({
     addImg(){
         let that = this; 
         wx.chooseImage({
-            count: 2, // 默认9
-            sizeType: ['compressed'], // 可以指定是原图还是压缩图，默认二者都有
-            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-            success() {
-                that.upload();
-            }
+            count: 3, // 默认9
+            sizeType: ['compressed'], 
+            sourceType: ['album', 'camera'], 
+            success:res=> {
+                // console.log(res);
+                that.upload()
+                let tempFilePaths = res.tempFilePaths;
+                for (let i = 0; i < tempFilePaths.length;i++){
+                    that.data.pics.push(tempFilePaths[i]);
+                }
+                console.log(this.data.pics)
+                that.setData({
+                    pics:this.data.pics
+                })
+            }     
         })
     },
+     // 删除图片
+    deleteImg(e) {
+        let that=this
+        let pics = this.data.pics
+        let index = e.currentTarget.dataset.index;
+        wx.showModal({
+            title: '提示',
+            content: '你想删除图片吗',
+            success (res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+                
+                pics.splice(index, 1);
+                that.setData({
+                    pics
+                })
+
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+                // let index = e.currentTarget.dataset.index;
+                // let pics = that.data.pics
+                wx.previewImage({
+                    current: pics[index],
+                    urls: pics
+                })
+              }
+            }
+          })
+        
+   },
+   // 预览图片
+    previewImg(e) {
+        let index = e.currentTarget.dataset.index;
+        let pics = this.data.pics
+        wx.previewImage({
+        current: pics[index],
+            urls: pics
+        })
+   },
+  
     upload() {
         wx.showToast({
         icon: "loading",
         title: "正在上传"
         })
-        // var tempFilePaths = res.tempFilePaths;
-        //   for (var i = 0; i < tempFilePaths.length;i++){
-        //     pics.push(tempFilePaths[i]);
-        //   }
-        //   console.log(pics);
-        //   that.setData({
-        //     pics: pics
-        //   })
-        // 
     },
     cancel(){
         console.log("取消成功")
@@ -70,31 +111,63 @@ Page({
         })
     },
     send(){
-        let that=this
+        this.setData({
+            isSend:true
+        })
+
+        //带提示的
+        // let that=this
         // wx.showModal({
         //     title: '提示',
         //     content: '确定是否发送',
         //    success (res) {
         //       if (res.confirm) {
-        //         that.addTag()     
+        //         that.addTag()
+        //         that.setData({
+        //             isSend:true
+        //         })
+
         //       } else if (res.cancel) {
         //         console.log('用户点击取消')
         //       }
         //     }
         // })
-        wx.navigateTo({
-            url: '../success/success',
+        
+    },
+    returnHome(){
+        wx.switchTab({
+            url: '../index/index',
             success: (result) => {
                 
             },
             fail: () => {},
             complete: () => {}
         });
+          
+    },
+    returnBack(){
+        wx.reLaunch({
+            url: '../daily/daily',
+            success: (result) => {
+                
+            },
+            fail: () => {},
+            complete: () => {}
+        });
+          
     },
     showPop() {
-        this.setData({
-            show: true
-        });
+        wx.showModal({
+            title: '提示',
+            content: '是否保存',
+            success (res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
     },
     onClose() {
         this.setData({

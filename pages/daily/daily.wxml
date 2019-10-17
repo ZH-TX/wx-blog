@@ -17,7 +17,11 @@
             <textarea class="" placeholder-class="text-placeholder" placeholder="在此输入你想说的话"></textarea>
         </view>
         <view class="bottom-content">
+            <block wx:for="{{pics}}" wx:key="{{index}}">
+                <image src="{{item }}" class="add-pic" bindtap="deleteImg" data-index="{{index}}" />
+            </block>
             <image class="add-pic" src="/assets/img/pic.png" bindtap="addImg"></image>
+ 
             <view class="add-tag">
                 <image class="add-tag-img" src="/assets/img/tag.png" />
                 <view class="add-tag-font" bindtap="addTag">添加标签</view>
@@ -26,12 +30,44 @@
     </view>
 </view>
 <view class="save-draft" bindtap="showPop">存为草稿</view>
-<van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" bind:cancel="onCancel" cancel-text="取消"></van-action-sheet>
+<!-- <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" bind:cancel="onCancel" cancel-text="取消"></van-action-sheet> -->
 <!-- <van-cell title="存为草稿" is-link bind:click="showPop" />
 <van-popup show="{{ show }}" bindclose="onClose" position="buttom" custom-style="height:292rpx">
     <view>123445</view>
     <view>123445</view>
 </van-popup> -->
+<view>
+    
+</view>
+  
+<!-- 成功与失败 -->
+<view class="send-after" wx:if="{{isSend}}">
+    <view wx:if="{{}}">
+        <mp-msg type="" icon="/assets/img/success.png" title="发布成功">
+    
+            <view slot="handle">
+                <button class="weui-btn btn-sty btn1" bindtap="returnHome">回到首页</button>
+                <button class="weui-btn btn-sty" bindtap="returnBack" >继续编辑</button>
+            </view>
+    
+        </mp-msg>
+    </view>
+
+    <view wx:else>
+        <mp-msg type="" icon="/assets/img/cancel.png" title="发布失败">
+        
+            <view slot="handle">
+                <button class="weui-btn btn-sty btn1" bindtap="returnBack">重新发布</button>
+                <button class="weui-btn btn-sty" bindtap="returnBack">存为草稿</button>
+            </view>
+        
+        </mp-msg>
+    </view>
+      
+    
+</view>
+  
+
 
 
 

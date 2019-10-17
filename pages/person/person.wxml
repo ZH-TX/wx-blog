@@ -5,7 +5,7 @@
             <image class="header-img" src="/assets/img/person/head.png" />
         </view>
     </view>
-    <view class="person-info">
+    <view class="person-info" bindtap="toEditor">
         <text class="name">玛丽缇娜</text>
         <image class="sex" src="/assets/img/person/gril.png"></image>
         <view class="name-info">常在河边走,哪有不湿鞋</view>
@@ -14,33 +14,33 @@
 <!-- 主体 -->
 <view class="main">
     <view class="main-layout">
-        <view class="content-layout">
-            <view class="content-lf">
+        <navigator class="content-layout" url="../myattention/myattention">
+            <view  class="content-lf" >
                 <image class="content-img" src="/assets/img/person/person.png" />
                 <view>我的关注</view>
             </view>
             <image class="arrow" src="/assets/img/arrow.png"></image>
-        </view>
-        <view class="content-layout">
+        </navigator>
+        <navigator class="content-layout" url="../mylike/mylike">
             <view class="content-lf">
                 <image class="content-img" src="/assets/img/person/like.png" />
                 <view>我的点赞</view>
             </view>
             <image class="arrow" src="/assets/img/arrow.png"></image>
-        </view>
-        <view class="content-layout">
+        </navigator>
+        <navigator class="content-layout" url="../mydraft/mydraft">
             <view class="content-lf">
                 <image class="content-img" src="/assets/img/person/editor.png" />
                 <view>我的草稿</view>
             </view>
             <image class="arrow" src="/assets/img/arrow.png"></image>
-        </view>
-        <view class="content-layout">
+        </navigator>
+        <navigator class="content-layout" url="../myeditor/myeditor">
             <view class="content-lf">
                 <image class="content-img" src="/assets/img/person/setting.png" />
                 <view>编辑资料</view>
             </view>
             <image class="arrow" src="/assets/img/arrow.png"></image>
-        </view>
+        </navigator>
     </view>
 </view>

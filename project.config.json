@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -103,6 +103,27 @@
 					"id": -1,
 					"name": "pages/like/like",
 					"pathName": "pages/like/like",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/success/success",
+					"pathName": "pages/success/success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myattention/myattention",
+					"pathName": "pages/myattention/myattention",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myeditor/myeditor",
+					"pathName": "pages/myeditor/myeditor",
 					"scene": null
 				}
 			]

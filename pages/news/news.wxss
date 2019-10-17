@@ -29,6 +29,11 @@
 .content{
     margin-top: 88rpx;
 }
+
+.content-lf{
+    width: 64px;
+ 
+}
 .content-list{
     display: flex;
     align-items: center;
