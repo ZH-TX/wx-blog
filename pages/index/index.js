@@ -1,5 +1,4 @@
-//index.js
-//获取应用实例
+import Toast from '../../weui/vant-weapp/toast/toast'
 const app = getApp()
 
 Page({
@@ -23,7 +22,22 @@ Page({
 		}
 		return {
 		  title: '自定义转发标题',
-		  path: '/page/user?id=123'
+		  path: '/page/user?id=123',
+		  success:()=>{
+			  wx.showToast({
+				  title: '转发成功',
+				  icon: 'success',
+				  image: '',
+				  duration: 1500,
+				  mask: false,
+				  success: (result) => {
+					  
+				  },
+				  fail: () => {},
+				  complete: () => {}
+			  });
+				
+		  }
 		}
 	  },
 	onLoad() {
@@ -31,6 +45,30 @@ Page({
 		// this.setData({
 		// 	search: this.search.bind(this),
 		// })
+	},
+	follow(){
+		Toast({
+			position:'bottom',
+			message:"关注成功",
+			duration:1000,
+		})
+	},
+	chat(){
+		Toast({
+			position:'bottom',
+			message:"暂时没有这个功能哦",
+			duration:1000,
+		})
+	},
+	navToProfile(){
+		wx.switchTab({
+			url: '../person/person',
+			success: (result) => {
+				
+			},
+			fail: () => {},
+			complete: () => {}
+		});
 	},
 	getTopics(isRefresh) {
 		let that = this

@@ -1,6 +1,40 @@
 /* pages/myeditor/myeditor.wxss */
 
+.header {
+    position: fixed;
+    height: 88rpx;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FAF9F4;
+    z-index: 10;
+  }
+  
+  .header-cancel{
+    font-size: 11px;
+    margin-left: 19px;
+  }
+  
+  .header-create{
+    font-size: 13px;
+  }
 
+  .header-send {
+    background: #69D7C1;
+    color: #fff;
+    border-radius: 10px;
+    width: 48px;
+    height: 21px;
+    text-align: center;
+    line-height: 21px;
+    font-size: 11px;
+    margin-right:19px;
+  }
+  .main{
+      margin-top: 88rpx;
+  }
 
 .head-list{
     padding: 20px;
@@ -26,6 +60,27 @@
 }
 
 .sex-img{
+    width: 13px;
+    height: 13px;
+}
+
+.tip{
+    color: #b2b2b2;
+    font-size: 9px;
+    padding: 10px;
+    float: right;
+}
+
+.tip::after{
+    content: '';
+    clear: both;
+}
+
+.img-radio{
+    float: left;
+}
+
+.sex-img-radio{
     width: 13px;
     height: 13px;
 }

@@ -1,2 +1,84 @@
-<!--pages/mylike/mylike.wxml-->
-<text>pages/mylike/mylike.wxml</text>
+<view class="header">
+    <view class="header-layout">
+        <view class="header-font">我的点赞</view>
+    </view>
+</view>
+
+<view class="content">
+    <view class="content-info">
+        <view>
+            <view class="content-list">
+                <view class="content-list-1">
+                    <image class="content-img" src="/assets/img/news/header1.png" />
+                    <view class="content-lf">
+                        <view>凉生有幸</view>
+                        <view class="list-color1">10-06</view>
+                    </view>
+                </view>
+                <view class="list-center">
+                    <view></view>
+                    <view></view>
+                </view>
+                <view>
+                    <view class="list-time">
+                        <image class="talk-img" src="/assets/img/home/like-active.png"  hidden="{{isActive}}" bindtap="changeImg" ></image>
+                        <image class="talk-img active" src="/assets/img/home/like.png" hidden="{{!isActive}}" bindtap="changeImg"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+          
+        <view class="content-text" bindtap="navTo">
+            <view class="content-text-tit">
+                深度学习在探索业务中的探索与实践
+            </view>
+            <view class="content-acticle">
+                酒店搜索跟传统的搜索排序中存在很多不一样的地方,
+                酒店搜索业务局别独有的业务特点,本文分享了深度学习
+                酒店搜索业务局别独有的业务特点,本文分享了深度学习
+                酒店搜索业务局别独有的业务特点,本文分享了深度学习	
+            </view>
+            <!-- 这里设置这个会失效 -->
+            <!-- <view wx:if="!overHeight"  class="overflow-font">
+                全文
+            </view> -->
+        </view>
+        <view class="tag-info">
+            <view>
+                <image class="tag-img" src="/assets/img/home/tag.png" />
+                <text class="tag-font">NLP , </text>
+                <text class="tag-font">深度学习 , </text>
+                <text class="tag-font">用户平台</text>
+            </view>
+            <view>
+                <image class="tag-img1" src="/assets/img/home/calendar.png" />
+                <text class="tag-time">2019.10.10</text>
+            </view>
+        </view>
+        <!-- <view class="talk">
+            <view class="talk-lf">
+                <image class="talk-img" src="/assets/img/home/head3.png"></image>
+                <image class="talk-img" src="/assets/img/home/head4.png"></image>
+                <image class="talk-img" src="/assets/img/home/head5.png"></image>
+                <navigator class="" target="" url="../like/like" hover-class="navigator-hover" open-type="navigate">
+                    <text class="talk-like">等7人喜欢 </text> 
+                </navigator>
+            </view>
+            <view class="talk-rg" >
+                <image class="talk-img" src="/assets/img/home/like-active.png"  hidden="{{isActive}}" bindtap="changeImg" ></image>
+                <image class="talk-img active" src="/assets/img/home/like.png" hidden="{{!isActive}}" bindtap="changeImg"></image>
+                <image class="talk-img talk-img-rg" src="/assets/img/home/forward.png" bindtap="shareLink"></image>
+            </view>
+        </view> -->
+        
+    </view>
+</view>
+  
+
+
+<veiw class="footer">
+    <view class="footer-color">
+        没有更多了
+    </view>
+      
+</veiw>

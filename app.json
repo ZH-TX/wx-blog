@@ -13,7 +13,8 @@
         "pages/myattention/myattention",
         "pages/mylike/mylike",
         "pages/mydraft/mydraft",
-        "pages/myeditor/myeditor"
+        "pages/myeditor/myeditor",
+        "pages/mydraftDetail/mydraftDetail"
         
     ],
     "window": {
@@ -67,7 +68,11 @@
         "van-cell": "/weui/vant-weapp/cell/index",
         "van-cell-group":"/weui/vant-weapp/cell-group/index",
         "van-action-sheet": "/weui/vant-weapp/action-sheet/index",
-        "van-steps": "/weui/vant-weapp/steps/index"
+        "van-steps": "/weui/vant-weapp/steps/index",
+        "van-dialog":"/weui/vant-weapp/dialog/index",
+        "van-radio": "/weui/vant-weapp/radio/index",
+        "van-radio-group": "/weui/vant-weapp/radio-group/index",
+        "van-toast": "/weui/vant-weapp/toast/index"
 
     
       }

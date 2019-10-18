@@ -1,4 +1,5 @@
 // pages/daily/daily.js
+import Toast from "../../weui/vant-weapp/toast/toast"
 Page({
     data: {
         pics: [],
@@ -90,6 +91,11 @@ Page({
         })
     },
     cancel(){
+        Toast({
+			position:'bottom',
+			message:"已经取消了哦",
+			duration:1000,
+		})
         console.log("取消成功")
     },
     addTag(){

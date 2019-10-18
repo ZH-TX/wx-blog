@@ -1,27 +1,61 @@
-<!-- 头部(未做) -->
-<view>
-    12345645
-    <!-- <image class="" src="" /> 
-    <view>
-        <view class="name"></view> <image class="sex"></image>
-        <view class="name-info"> </view>
-          
-    </view> -->
-</view>
 
-<!-- 主体 -->
-<!-- <view>
-    <view class="content-layout">
-        <view>
-            <image class="" src=""  />
+
+
+<view class="content">
+    <view class="content-info">
+        <view class="font">AI技术在智能海报设计中的应用越来越广泛</view>
+        <view class="tag-info">
             <view>
-                我的关注
+                <image class="tag-img" src="/assets/img/home/tag.png" />
+                <text class="tag-font">AI , </text>
+                <text class="tag-font">计算机视觉 , </text>
+                <text class="tag-font">算法</text>
             </view>
-              
+            <view>
+                <image class="tag-img1" src="/assets/img/home/calendar.png" />
+                <text class="tag-time">发表于2019.10.10</text>
+            </view>
         </view>
-        <image class="arrow" src="/assets/img/arrow.png"></image>
-          
+        <view class="content-pic" >
+            <image class="content-img img-left" src="/assets/img/home/AI.png" />
+            <image class="content-img" src="/assets/img/home/AI2.png" />
+        </view>
         
-          
+        
+        <view class="talk">
+            <view class="talk-lf">
+                <image class="talk-img" src="/assets/img/home/head3.png"></image>
+                <image class="talk-img" src="/assets/img/home/head4.png"></image>
+                <image class="talk-img" src="/assets/img/home/head5.png"></image>
+                <navigator class="" target="" url="../like/like" hover-class="navigator-hover" open-type="navigate">
+                    <text class="talk-like">等7人喜欢 </text> 
+                </navigator>
+                
+            </view>
+            <view class="talk-rg" >
+                <image class="talk-img" src="/assets/img/home/like-active.png"  hidden="{{isActive}}" bindtap="changeImg" ></image>
+                <image class="talk-img active" src="/assets/img/home/like.png" hidden="{{!isActive}}" bindtap="changeImg"></image>
+                <image class="talk-img talk-img-rg" src="/assets/img/home/forward.png" bindtap="shareLink"></image>
+            </view>
+        </view>
+        <view class="talk-font">
+            <text>华美: <text class="talk-font-c" >写的很棒!</text></text>
+            <text>Jerry: <text class="talk-font-c" >是啊,现在AI领域很流行</text></text>
+            <text>进击的橙子: <text class="talk-font-c" >理解的很深刻</text></text>
+            <navigator class=""  url="../comment/comment"  open-type="navigate">
+                <view class="talk-comment"> 共6条评论</view>
+            </navigator>
+        </view>
+        <view class="send-change">
+            <view class="talk-input {{!isComment? 'comment': 'active-comment'}}">
+                <input type="text" placeholder-class="like-input" bindtap="sendComment" focus="auto" bindblur="blur"  value="{{value2}}" placeholder="喜欢就评论告诉TA" />
+                <image class="talk-info-img" src="/assets/img/home/comment.png" />
+            </view>
+            <view hidden="{{!isComment}}" class="comment-send-font" bindtap="sendInfo">
+                发送
+            </view>
+        </view>
+        
+        
     </view>
-</view> -->
+</view>

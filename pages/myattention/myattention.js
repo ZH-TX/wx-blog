@@ -14,34 +14,31 @@ Page({
     },
     // 可以id来进行判断
     toAttention(e){
-        let id=e.currentTarget.dataset.id
-        let index=this.data.i
-        index=id-1
-        let isFollow=this.data.myFollowList[index].isFollow;
-            this.setData({
-                isFollow:!isFollow
-            })
-
-        
-        console.log(isFollow);
-        
-        // wx.showModal({
-        //         title: '确定不再关注',
-        //         content: '',
-        //         showCancel: true,
-        //         cancelText: '取消',
-        //         cancelColor: '#000000',
-        //         confirmText: '确定',
-        //         confirmColor: '#F76E6D',
-        //         success: (result) => {
-        //             if (result.confirm) {
-                       
+        wx.showModal({
+                title: '确定改变关注状态?',
+                content: '',
+                showCancel: true,
+                cancelText: '取消',
+                cancelColor: '#000000',
+                confirmText: '确定',
+                confirmColor: '#F76E6D',
+                success: (result) => {
+                    if (result.confirm) {
+                        console.log(this);
+                        let id=e.currentTarget.dataset.id
+                        let index=this.data.i
+                        index=id-1
+                        let isFollow=this.data.myFollowList[index].isFollow;
+                        this.setData({
+                            // data对象中属性改变的写法
+                            [`myFollowList[${index}].isFollow`]:!isFollow
+                        })
                         
-        //             }
-        //         },
-        //         fail: () => {},
-        //         complete: () => {}
-        //     })
+                    }
+                },
+                fail: () => {},
+                complete: () => {}
+            })
         
     }
    

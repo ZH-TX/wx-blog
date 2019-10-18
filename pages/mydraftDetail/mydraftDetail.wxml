@@ -1,0 +1,10 @@
+<!--pages/mydraftDetail/mydraftDetail.wxml-->
+<text>pages/mydraftDetail/mydraftDetail.wxml
+    草稿详情页
+</text>
+
+<view>
+    <image src=""></image>
+    <image src=""></image>
+</view>
+  

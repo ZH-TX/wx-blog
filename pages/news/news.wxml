@@ -5,7 +5,7 @@
         <view class="header-font">消息通知</view>
     </view>
 </view>
-<view class="content">
+<view class="content" bindtap="prompt">
     <view>
         <view>
             <view class="content-list">
@@ -67,3 +67,5 @@
         </view>
     </view>
 </view>
+
+<van-toast id="van-toast"></van-toast>

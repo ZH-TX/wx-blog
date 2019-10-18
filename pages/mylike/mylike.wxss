@@ -1,1 +1,251 @@
-/* pages/mylike/mylike.wxss */
+page{
+    background: #F2F5F5;
+}
+
+.header {
+    position: fixed;
+    height: 88rpx;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAF9F4;
+}
+
+.header-layout{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.header-font{
+    padding: 17px;
+    font-size: 13px;
+    color: #355335;
+}
+
+
+
+
+.main {
+	background: #F3F5F5;
+}
+
+.content {
+	margin-top: 108rpx;
+	background: #ffff;
+	border-radius: 3px;
+
+}
+
+
+
+.content-lf{
+    padding-left: 17px;
+ 
+}
+.content-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16rpx;
+    /* padding:16rpx 38rpx; */
+
+}
+
+.content-list-1{
+    display: flex;
+    flex-flow: row nowrap ;
+}
+
+.content-img{
+    width: 36px;
+    height: 36px;
+    
+}
+
+.list-center{
+    width: 40%;
+}
+.list-center view{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.list-title{
+    /* font-size: 10px; */
+    text-decoration: underline;
+
+}
+
+.list-content{
+    color: #A7A7A7;
+    font-size: 10px;
+}
+.list-color1{
+    color: #A7A7A7;
+    font-size: 11px;
+}
+
+
+
+.list-time{
+    font-size: 9px;
+    color: #BABABA;
+}
+
+
+
+
+
+
+.content-info {
+	margin: 30rpx;
+
+}
+
+.content-pic {
+	/* margin: 30rpx; */
+	display: flex;
+	justify-content: space-between;
+	padding-top: 16px;
+
+}
+
+.font {
+	/* margin:0 30rpx; */
+	font-size: 12px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	/* font-weight: 600;
+  line-height: 24rpx; */
+}
+
+
+.tag-info {
+	display: flex;
+	justify-content: space-between;
+	
+}
+.tag-info  text{
+	text-decoration: underline;
+}
+.tag-info .tag-time{
+	text-decoration: none;
+}
+.tag-img {
+	width: 8px;
+	height: 7px;
+
+}
+
+.tag-img1 {
+	width: 7px;
+	height: 7px;
+}
+
+.tag-font {
+	font-size: 10px;
+	color: #B4B4B4;
+}
+
+.tag-time {
+	font-size: 10px;
+	color: #B4B4B4;
+}
+
+.talk {
+	display: flex;
+	justify-content: space-between;
+	/* align-items: center; */
+	/* align-content: center; */
+}
+
+.talk-lf {
+	display: flex;
+	align-items: center;
+}
+
+.talk-rg {
+	/* margin-right: 26px; */
+}
+
+.talk-img {
+	width: 15px;
+	height: 15px;
+
+}
+
+.talk-img-rg {
+	padding-left: 28rpx;
+}
+
+.talk-like {
+	font-size: 9px;
+	padding-left: 10rpx;
+	color: #566B96;
+}
+
+
+.content-text-tit {
+	font-size: 15px;
+	font-weight: 500;
+	/* padding-top: 16px; */
+}
+
+.content-acticle {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display:-webkit-box;  
+	-webkit-box-orient:vertical; 
+	-webkit-line-clamp:2; 
+	font-size: 12px;
+	color: #898989;
+}
+
+.overflow-font{
+	position: relative;
+	width: 24px;
+	margin-top: -18px;
+	margin-left: 280px;
+	font-size: 24rpx;
+	color: rgb(64, 85, 128);
+	background-image:-webkit-linear-gradient(top,hsla(0,0%,100%,.5),#fff);
+	background-image:linear-gradient(180deg,hsla(0,0%,100%,.5),#fff);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer-color{
+    color: #D3D3D3;
+    font-size: 18rpx;
+    margin-bottom: 64rpx;
+}

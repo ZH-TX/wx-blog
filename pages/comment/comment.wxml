@@ -64,12 +64,17 @@
 
 <view class="input-section" wx:if="{{showInput}}">
     <view>
-        <input class='input-input' value="{{inputMessage}}" focus="auto" placeholder="请输入内容"  bindblur="onHideInput" confirm-type="send"  />
+        <input class='input-input' 
+                value="{{inputMessage}}" 
+                focus="auto" placeholder="请输入内容"  
+                bindblur="onHideInput" 
+                confirm-type="send"
+                bindinput="inputValue"  />
     </view>   
-  <view class="input-send" >
-    <view class="send_btn">
-      <text class="send_btn_text">发送</text>
+    <view class="input-send" >
+        <view class="send_btn">
+        <text class="send_btn_text" bindtap="inputSend">发送</text>
+        </view>
     </view>
-  </view>
 </view>
 

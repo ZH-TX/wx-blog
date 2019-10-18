@@ -1,2 +1,36 @@
-<!--pages/mydraft/mydraft.wxml-->
-<text>pages/mydraft/mydraft.wxml</text>
+<view class="header">
+    <view class="header-layout">
+        <view class="header-font">我的草稿</view>
+    </view>
+</view>
+<view class="content">
+    <view>
+        <view>
+            <view class="content-list" hover-class="hover" bindtap="navToDetail">
+                <view class="content-list-1">
+                    <image class="content-img" src="/assets/img/home/head.png" />
+                    <view class="content-lf">
+                        <view>玛丽缇娜</view>
+                        <view class="list-color1">(无主题)</view>
+                    </view>
+                </view>
+                <view>
+                    <view class="list-time">10分钟前</view>
+                </view>
+            </view>
+            <view class="content-list" hover-class="hover" bindtap="navToDetail">
+                <view class="content-list-1">
+                    <image class="content-img" src="/assets/img/home/head.png" />
+                    <view class="content-lf">
+                        <view>玛丽缇娜</view>
+                        <view class="list-color1">研发团队资源成本优化</view>
+                    </view>
+                </view>
+                <view>
+                    <view class="list-time">2019-09-30</view>
+                </view>
+            </view>
+           
+        </view>
+    </view>
+</view>

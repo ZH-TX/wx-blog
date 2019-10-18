@@ -1,1 +1,88 @@
-/* pages/mydraft/mydraft.wxss */
+.header {
+    position: fixed;
+    height: 88rpx;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAF9F4;
+}
+
+.header-layout{
+    display: flex;
+    align-items: center;
+}
+.header-img{
+    width: 13px;
+    height: 15px;
+    
+}
+.header-font{
+    padding: 17px;
+    font-size: 13px;
+    color: #355335;
+}
+
+
+.content{
+    margin-top: 88rpx;
+}
+
+.content-lf{
+    padding-left: 17px;
+ 
+}
+.content-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:16rpx 38rpx;
+
+}
+
+.hover{
+    background: #e4e3e3;
+}
+
+.content-img{
+    width: 36px;
+    height: 36px;
+    
+}
+
+
+.list-center view{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.list-title{
+    /* font-size: 10px; */
+    text-decoration: underline;
+
+}
+
+.list-content{
+    color: #A7A7A7;
+    font-size: 10px;
+}
+
+.content-list-1{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.list-color1{
+    color: #A7A7A7;
+    font-size: 11px;
+    text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+
+.list-time{
+    font-size: 7px;
+    color: #BABABA;
+}
