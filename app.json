@@ -15,7 +15,6 @@
         "pages/mydraft/mydraft",
         "pages/myeditor/myeditor",
         "pages/mydraftDetail/mydraftDetail"
-        
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -23,57 +22,58 @@
         "navigationBarTitleText": "",
         "navigationBarTextStyle": "black"
     },
-    "tabBar":{
-        "color":"#B4B4B4",
-        "selectedColor":"#A5CE52",
-        "backgroundColor":"#FAF9F4",
-        "list":[{
-            "pagePath":"pages/index/index",
-            "iconPath":"assets/img/home.png",
-            "selectedIconPath":"assets/img/home-active.png",
-            "text":"首页"
-        },
-        {
-            "pagePath":"pages/file/file",
-            "iconPath":"assets/img/page.png",
-            "selectedIconPath":"assets/img/page-active.png",
-            "text":"归档"
-        },
-        {
-            "pagePath":"pages/news/news",
-            "iconPath":"assets/img/info.png",
-            "selectedIconPath":"assets/img/info-active.png",
-            "text":"消息"
-        },
-        {
-            "pagePath":"pages/person/person",
-            "iconPath":"assets/img/person.png",
-            "selectedIconPath":"assets/img/person-active.png",
-            "text":"个人"
-        }
-    ]},
+    "tabBar": {
+        "color": "#B4B4B4",
+        "selectedColor": "#A5CE52",
+        "backgroundColor": "#FAF9F4",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "assets/img/home.png",
+                "selectedIconPath": "assets/img/home-active.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/file/file",
+                "iconPath": "assets/img/page.png",
+                "selectedIconPath": "assets/img/page-active.png",
+                "text": "归档"
+            },
+            {
+                "pagePath": "pages/news/news",
+                "iconPath": "assets/img/info.png",
+                "selectedIconPath": "assets/img/info-active.png",
+                "text": "消息"
+            },
+            {
+                "pagePath": "pages/person/person",
+                "iconPath": "assets/img/person.png",
+                "selectedIconPath": "assets/img/person-active.png",
+                "text": "个人"
+            }
+        ]
+    },
     "networkTimeout": {
         "request": 10000,
         "downloadFile": 10000
     },
     "sitemapLocation": "sitemap.json",
     "usingComponents": {
-        "mp-dialog":"/weui/weui-miniprogram/dialog/dialog",
-        "mp-searchbar":"/weui/weui-miniprogram/searchbar/searchbar",
+        "mp-dialog": "/weui/weui-miniprogram/dialog/dialog",
+        "mp-searchbar": "/weui/weui-miniprogram/searchbar/searchbar",
         "mp-cell": "/weui/weui-miniprogram/cell/cell",
         "mp-cells": "/weui/weui-miniprogram/cells/cells",
         "mp-uploader": "/weui/weui-miniprogram/uploader/uploader",
-        "mp-msg":"weui/weui-miniprogram/msg/msg",
+        "mp-msg": "weui/weui-miniprogram/msg/msg",
         "van-popup": "/weui/vant-weapp/popup/index",
         "van-cell": "/weui/vant-weapp/cell/index",
-        "van-cell-group":"/weui/vant-weapp/cell-group/index",
+        "van-cell-group": "/weui/vant-weapp/cell-group/index",
         "van-action-sheet": "/weui/vant-weapp/action-sheet/index",
         "van-steps": "/weui/vant-weapp/steps/index",
-        "van-dialog":"/weui/vant-weapp/dialog/index",
+        "van-dialog": "/weui/vant-weapp/dialog/index",
         "van-radio": "/weui/vant-weapp/radio/index",
         "van-radio-group": "/weui/vant-weapp/radio-group/index",
-        "van-toast": "/weui/vant-weapp/toast/index"
-
-    
-      }
+        "van-toast": "/weui/vant-weapp/toast/index",
+        "van-search": "/weui/vant-weapp/search/index"
+    }
 }

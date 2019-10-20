@@ -109,7 +109,7 @@ Component({
         placeholder: {
             type: String,
             value: '搜索'
-        },
+        }, 
         value: {
             type: String,
             value: ''
@@ -145,7 +145,7 @@ Component({
         }
     },
     methods: {
-        clearInput: function clearInput() {
+        clearInput: function clearInput() { 
             this.setData({
                 value: ''
             });

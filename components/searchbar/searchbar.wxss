@@ -1,0 +1,13 @@
+/* components/searchbar.wxss */
+.search-img{
+    width: 15px;
+	height: 15px;
+	margin: 10rpx 14rpx;
+    flex-shrink: 0;
+}
+
+.header-right {
+	margin-right: 38rpx;
+	display: flex;
+	align-items: center;
+}

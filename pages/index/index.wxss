@@ -46,7 +46,7 @@ page{
 	/* display: inline-block; */
 	width: 202rpx;
 	height: 50rpx;
-	border: 1px solid rgba(53, 53, 53, 1);
+	border: 1px solid #353535;
 	border-radius: 12px;
 }
 
@@ -77,6 +77,11 @@ page{
 	margin: 20rpx;
 	flex-shrink: 0;
 }
+
+.search-bar{
+	background: #FAF9F4;
+}
+
 
 .search-item {
 	position: absolute;
@@ -384,5 +389,7 @@ page{
 	color: rgb(64, 85, 128);
 	background-image:-webkit-linear-gradient(top,hsla(0,0%,100%,.5),#fff);
 	background-image:linear-gradient(180deg,hsla(0,0%,100%,.5),#fff);
-
+}
+.color{
+	color:red;
 }

@@ -1,0 +1,17 @@
+<!-- components/searchbar.wxml -->
+<view class="header-right {{searchClass}} " >
+  <view bindtap="changeInput">
+	<image hidden="{{isInput}}" class="search-img" src="/assets/img/home/search.png" />
+    <view hidden="{{isInput}}" class="{{viewInput}}" bindtap="tap">{{pholder}}</view>
+
+  
+    
+
+    <input hidden="{{!isInput}}" type="text" placeholder="{{pholder}}"/>
+    
+ 
+    <!-- <mp-searchbar wx:else ext-class="earch-bar" placeholder="关键字,标签" bindselectresult="selectResult" search="{{search}}"></mp-searchbar> -->
+    <!-- <image hidden="{{!isInput}}" class="search-cancel" src="/assets/img/home/cancel.png" bindtap="cancel" /> -->
+    <!-- <image class="header-link" src="/assets/img/home/链接 (2).png" mode="aspectFit" 
+		bindtap="shareLink"/> -->
+</view>   

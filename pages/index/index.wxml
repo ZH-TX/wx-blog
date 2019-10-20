@@ -204,4 +204,32 @@
 <van-toast id="van-toast"></van-toast>
 
 
+	<view class="header-right {{!isInput?'header-search':'active-search'}}">
+		<image wx:if="{{!isInput}}" class="search-img" src="/assets/img/home/search.png"  />
+	
+		<view wx:if="{{!isInput}}" class="input ph-font"   bindtap="tap" >关键词,标签</view>
+		<mp-searchbar wx:else   ext-class="earch-bar" placeholder="关键字,标签" bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+		<!-- <image hidden="{{!isInput}}" class="search-cancel" src="/assets/img/home/cancel.png" bindtap="cancel" /> -->
+			
+		<!-- <image class="header-link" src="/assets/img/home/链接 (2).png" mode="aspectFit" 
+		bindtap="shareLink"/> -->
+	</view>
+	<!-- <view wx:if="{{isInput}}" class="search-item">
+		<view>
+			暂无数据
+		</view>
+		<view class="search-data" hover-class="deep-color">数据1</view>
+		<view class="search-data" hover-class="deep-color">数据2</view>
+	</view> -->
+
+	<!-- <van-search value="{{ value }}" placeholder="关键词,标签" use-action-slot bind:search="onSearch">
+		<view slot="action" bind:tap="onSearch">搜索</view>
+	</van-search> -->
+
+	<searchbar searchClass=""  viewInput="" bindtap="tryTo"> </searchbar>
+
+
+
+
+
 

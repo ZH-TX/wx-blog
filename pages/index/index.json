@@ -3,5 +3,7 @@
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "个人博客",
   "navigationBarTextStyle": "black",
-  "usingComponents": {}
+  "usingComponents": {
+    "searchbar":"../../components/searchbar/searchbar"
+  }
 }

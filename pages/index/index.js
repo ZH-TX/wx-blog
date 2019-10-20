@@ -12,6 +12,7 @@ Page({
 		isComment:false,
 		isContent:false,
 		overHeight:false,
+		search:'',
 
 	},
 
@@ -42,10 +43,30 @@ Page({
 	  },
 	onLoad() {
 		this.getTopics(true)
-		// this.setData({
-		// 	search: this.search.bind(this),
-		// })
+		this.setData({
+			search: this.search.bind(this),
+		})
 	},
+	tryTo(e){
+		// console.log(e);
+		// console.log(this);
+	},
+	search(value) {
+		return new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve([{
+					text: '搜索结果',
+					value: 1
+				}, {
+					text: '搜索结果2',
+					value: 2
+				}])
+			}, 200)
+		})
+	},
+	selectResult: function (e) {
+        console.log('select result', e.detail)
+    },
 	follow(){
 		Toast({
 			position:'bottom',
@@ -156,19 +177,7 @@ Page({
 		})
 		  
 	},
-	search(value) {
-		return new Promise((resolve, reject) => {
-			setTimeout(() => {
-				resolve([{
-					text: '搜索结果',
-					value: 1
-				}, {
-					text: '搜索结果2',
-					value: 2
-				}])
-			}, 200)
-		})
-	},
+	
 	selectResult(e) {
 		console.log('select result', e.detail)
 	},
