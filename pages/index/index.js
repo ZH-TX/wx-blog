@@ -13,8 +13,10 @@ Page({
 		isContent:false,
 		overHeight:false,
 		search:'',
+		result:[],
 
 	},
+	lastSearch:Date.now(),
 
 	onShareAppMessage(res) {
 		if (res.from === 'button') {
@@ -47,17 +49,16 @@ Page({
 			search: this.search.bind(this),
 		})
 	},
-	tryTo(e){
-		// console.log(e);
-		// console.log(this);
-	},
+	
 	search(value) {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
-				resolve([{
+				resolve(
+					[{
 					text: '搜索结果',
 					value: 1
-				}, {
+				}, 
+				{
 					text: '搜索结果2',
 					value: 2
 				}])
@@ -142,9 +143,21 @@ Page({
 		})
 	},
 	changeInput(e){
-		// console.log(e.detail.value);
+		console.log(this.data.result);
+		if(Date.now()-this.lastSearch>500){
+			this.search(e.detail.value).then((result)=>{
+				this.setData({
+					result:result
+				})
+				
+			}).catch((err)=>{
+				throw err
+	
+			})
+		}
+		
 		this.setData({
-			value:e.detail.value
+			value:e.detail.value,
 		})
 
 	},

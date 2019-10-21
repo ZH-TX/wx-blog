@@ -17,6 +17,10 @@ Component({
         pholder:{
             type:String,
             value:'关键词,标签'  //默认值
+        },
+        search:{
+            type:Function,
+            value:null,
         }
 
 
@@ -24,7 +28,7 @@ Component({
 
 
     data: {
-
+        result:[]
     },
 
 
@@ -35,7 +39,25 @@ Component({
                 this.setData({
                 isInput:!this.data.isInput
             })
-        }
+        },
+        handleToanother(e){
+            // console.log(e.detail);
+            
+            this.triggerEvent('test',e)
+        },
+        inputChange(e){
+            this.setData({
+                value:e.detail.value,
+            }),
+            this.data.search(e.detail.value).then((res)=>{
+                this.setData({
+                    result:res,
+                })
+    
+            })
+
+        },
+        
 
     }
 })

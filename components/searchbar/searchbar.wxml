@@ -1,17 +1,16 @@
 <!-- components/searchbar.wxml -->
-<view class="header-right {{searchClass}} " >
-  <view bindtap="changeInput">
-	<image hidden="{{isInput}}" class="search-img" src="/assets/img/home/search.png" />
-    <view hidden="{{isInput}}" class="{{viewInput}}" bindtap="tap">{{pholder}}</view>
+<view class="header-right {{searchClass}} ">
+	<view bindtap="changeInput">
+		<image hidden="{{isInput}}" class="search-img" src="/assets/img/home/search.png" />
+    	<view hidden="{{isInput}}"  class="{{viewInput}}" bindtap="tap" bindtap="handleToanother">{{pholder}}</view>
 
-  
-    
-
-    <input hidden="{{!isInput}}" type="text" placeholder="{{pholder}}"/>
+	</view>
+    <input hidden="{{!isInput}}" type="text" focus="{{true}}" bindinput="inputChange" placeholder="{{pholder}}"/>
     
  
-    <!-- <mp-searchbar wx:else ext-class="earch-bar" placeholder="关键字,标签" bindselectresult="selectResult" search="{{search}}"></mp-searchbar> -->
-    <!-- <image hidden="{{!isInput}}" class="search-cancel" src="/assets/img/home/cancel.png" bindtap="cancel" /> -->
-    <!-- <image class="header-link" src="/assets/img/home/链接 (2).png" mode="aspectFit" 
-		bindtap="shareLink"/> -->
+ 	<mp-cells class="searchbar-result  {{extClass}}" wx:if="{{ result.length > 0}}">
+		<mp-cell bindtap="selectResult" data-index="{{index}}" wx:for="{{result}}" wx:key="{{index}}" hover>
+			<view>{{item.text}}</view>
+		</mp-cell>
+	</mp-cells>
 </view>   
