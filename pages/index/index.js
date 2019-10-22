@@ -14,6 +14,42 @@ Page({
 		overHeight:false,
 		search:'',
 		result:[],
+		content:[
+			{	
+				id:0,
+				src:["/assets/img/home/AI.png","/assets/img/home/AI2.png"],
+				title:"AI技术在智能海报设计中的应用越来越广泛",
+				tag:["AI","计算机视觉","算法"],
+				time:'2019.10.10',
+				likeImg:["/assets/img/home/head3.png","/assets/img/home/head4.png","/assets/img/home/head5.png","/assets/img/home/head5.png"],
+				isLike:false,
+				comment:[
+						{name:'华美',talk:'写的很好的'},
+						{name:'Jerry',talk:'是啊'},
+						{name:'经济的橙子',talk:'不错'},
+						{name:'华美',talk:'很好的'}
+					// name:['华美','Jerry','进击的橙子','华美',],
+					// talk:['写的狠吧昂','是啊','写的昂','哈哈哈']
+				]
+			},
+			{
+				id:1,
+				src:["/assets/img/home/AI.png","/assets/img/home/AI2.png"],
+				title:"AI技术在智能海报设计中的应用越来越广泛",
+				tag:["AI","计算机视觉","算法"],
+				time:'2019.10.10',
+				likeImg:["/assets/img/home/head3.png","/assets/img/home/head4.png","/assets/img/home/head5.png","/assets/img/home/head5.png"],
+				isLike:false,
+				comment:[
+						{name:'华美',talk:'写的很好的'},
+						{name:'Jerry',talk:'是啊'},
+						{name:'经济的橙子',talk:'不错'},
+						{name:'华美',talk:'很好的'}
+					// name:['华美','Jerry','进击的橙子','华美',],
+					// talk:['写的狠吧昂','是啊','写的昂','哈哈哈']
+				],
+			}
+		]
 
 	},
 	lastSearch:Date.now(),
@@ -101,9 +137,11 @@ Page({
 
 		}, 2000)
 	},
-	changeImg(){
+	changeImg(e){
+		console.log(e);
+		let index=e.currentTarget.dataset['index']
 		this.setData({
-			isActive:!this.data.isActive
+			[`content[${index}].isLike`]:!this.data.content[index].isLike
 		})
 
 	},
